@@ -1,0 +1,34 @@
+body {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input {
+    border: 0;
+    outline: none;
+  }
+  
+a, a:hover {
+  text-decoration: none;
+}
+
+fieldset {
+  border: 0;
+}
+
+ol, ul, p, dd, dl {
+  padding: 0;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+button, input {
+  overflow: visible;
+  outline: none;
+}
+em,i {
+  font-style: normal;
+}

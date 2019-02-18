@@ -1,0 +1,440 @@
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+input, button {outline: none;}
+.buy_con {
+	background: #f5f5f5;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.member_header {
+	height: 2.2rem;
+	line-height: 2.2rem;
+	font-size: 0.9rem;
+	color: rgba(51, 51, 51, 1);
+	text-align: center;
+	border-bottom: rgba(217, 217, 217, 1) 0.025rem solid;
+	position: relative;
+	background: #fff;
+}
+
+.member_fanhui {
+	background: url(../../image/member_fanhui.png) no-repeat 0.6rem 0.6rem;
+	background-size: 0.55rem 1rem;
+	display: block;
+	position: absolute;
+	padding-left: 1.4rem;
+	color: rgba(236, 126, 45, 1);
+}
+.search-input {
+  width: 61.333vw;
+  height: 8.533vw;
+  border: none;
+  text-indent: 1.6vw;
+  border-radius: 1.6vw;
+  border: #ec7e2d 1px solid;
+  background: #f4f4f4;
+  font-size: 3.2vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-sumbit {
+  width: 13.333vw;
+  height: 8.533vw;
+  border: none;
+  background: #ec7e2d url(../../image/search.png) no-repeat;
+  background-size: 6.4vw 6.4vw;
+  background-position: center;
+  border-radius: 1.6vw;
+  position: absolute;
+  top: 50%;
+  right: 3.2vw;
+  transform: translate(0, -50%);
+}
+
+.list {
+	margin-bottom: 16vw;
+}
+
+.footer {
+	width: 18.75rem;
+	height: 2.5rem;
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 1px solid #dbdbdb;
+	background-color: #fff;
+	display: flex;
+	flex-flow: center center;
+}
+
+.footer ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  flex: 1 1;
+  font-size: .7rem;
+}
+.index img,
+.xiaoxi img,
+.shop img,
+.shoping img,
+.my img {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+#box {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1.25rem;
+
+}
+
+.shop_content {
+	background: #fff;
+	margin-bottom: 0.3rem;
+	overflow: hidden;
+}
+
+img.shop_photo {
+	width: 4.9rem;
+	height: 4.9rem;
+	float: left;
+	margin: 0.3rem 0.6rem;
+}
+
+.shop_info {
+	float: left;
+	width: 12.05rem;
+	height: 4.9rem;
+	margin: 0.3rem 0.6rem 0.3rem 0;
+	position: relative;
+}
+
+.shop_info h3 {
+	color: rgba(51, 51, 51, 1);
+	font-size: 0.8rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+
+.shop_info p {
+	font-size: 3.2vw;
+	line-height: 2rem;
+  color: rgba(236, 126, 45, 1);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shop_price {
+	display: block;
+	position: absolute;
+	width: 5.4rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border-radius: 0.2rem;
+	text-align: center;
+	border: rgba(236, 126, 45, 1) 0.025rem solid;
+	color: rgba(236, 126, 45, 1);
+	font-size: 0.6rem;
+	bottom: 0.3rem;
+	left: 0;
+}
+
+.count {
+	display: block;
+	position: absolute;
+	width: 5rem;
+	height: 1.5rem;
+	background: rgba(236, 126, 45, 1);
+  border-radius: 0.2rem;
+  font-size: .7rem;
+	line-height: 1.5rem;
+	text-align: center;
+	color: #fff;
+	right: 0;
+	bottom: 0.3rem;
+}
+
+/*弹框*/
+.layerbg {
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1000;
+}
+
+.layer-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;  
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+}
+.layer_other {
+	background: #fff;
+	border-radius: 0.3rem;
+  width: 11.15rem;
+  position: relative;
+}
+
+.layer_other h1 {
+	font-size: 4.267vw;
+	text-align: center;
+	margin-top: 3.2vw;
+	margin-bottom: 3.2vw;
+	color: rgba(51, 51, 51, 1);
+	font-weight: bold;
+}
+
+.layer_other h3 {
+	margin: 0 0.6rem;
+  color: rgba(51, 51, 51, 1);
+  font-weight: normal;
+  font-size: 4.267vw;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.market {
+	margin: 0.35rem 1.2rem 0 1.2rem;
+}
+
+.market ul li {
+	overflow: hidden;
+	line-height: 1.2rem;
+	color: rgba(51, 51, 51, 1);
+	font-size: 3.733vw;
+}
+
+.market ul li span {
+	float: right;
+}
+
+.rate {
+	color: rgba(236, 126, 45, 1);
+	font-size: 3.733vw;
+	line-height: 1.4rem;
+	padding-bottom: 0.20rem;
+	border-bottom: #e5e5e5 0.025rem solid;
+	margin: 0 3.2vw;
+	font-weight: bold;
+}
+
+.buy_sure {
+	text-align: center;
+	color: rgba(236, 126, 45, 1);
+	line-height: 2rem;
+	font-size: 4.267vw;
+	font-weight: bold;
+	position: relative;
+	height: 2rem;
+}
+
+.buy_sure span {
+	display: block;
+	width: 4rem;
+	height: 2rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.layer_cart {
+	background: #fff;
+	border-radius: 0.3rem;
+	width: 11.15rem;
+  height: 7rem;
+  position: relative;
+}
+.layer_cart h1 {
+	font-size: 0.8rem;
+	text-align: center;
+	margin-top: 0.6rem;
+	margin-bottom: 1.2rem;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+}
+.layer_cart h3 {
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: bold;
+	color: rgba(89, 89, 89, 1);
+}
+
+.layer_plus {
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url(../../image/layer_plus.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	right: 3.02rem;
+	top: 2.75rem;
+}
+.layer_reduce {
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url(../../image/layer_reduce.png) no-repeat;
+	background-size: 100%;
+	position: absolute;
+	left: 3.02rem;
+	top: 2.75rem;
+}
+.layer_button {
+	margin: 0 0.575rem;
+	position: absolute;
+	bottom: 0;
+	height: 2rem;
+	font-size: 0.8rem;
+	border-top: #d5d5d5 0.05rem solid;
+	width: 10rem;
+}
+.layer_cancel {
+	display: block;
+	position: absolute;
+	width: 5rem;
+	height: 2rem;
+	line-height: 2rem;
+	border-right: #d5d5d5 0.025rem solid;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	color: rgba(153, 153, 153, 1);
+}
+.layer_ok {
+	display: block;
+	position: absolute;
+	width: 5rem;
+	height: 2rem;
+	line-height: 2rem;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	color: rgba(236, 126, 45, 1);
+}
+
+/*Toast轻提示*/
+.toast {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 40vw;
+	padding-top: 18vw;
+	padding-bottom: 4vw;
+	border-radius: 1.5vw;
+	background: rgba(0, 0, 0, .8) url(../../image/duihao.png) no-repeat;
+	background-size: 13vw 9.2vw;
+	background-position: center 4vw;
+	color: #fff;
+	font-size: 3.733vw;
+	text-align: center;
+	line-height: 1.6;
+}
+
+/*底部导航栏*/
+.footbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100vw;
+	background: #fff;
+	transition: transform .2s ease-out,-webkit-transform .2s ease-out;
+	box-shadow: 0 .4vw 1.867vw .267vw rgba(0,0,0,.12)
+}
+.footbar ul {
+  display: flex;
+  overflow: hidden;
+}
+.footbar li {
+  flex: 1;    
+  height: 13.333vw;
+}
+.link-home a {
+  background: url(../../image/icon-home.png) no-repeat;  
+}
+.link-home.active a{
+  color: #ec7e2d;
+  background: url(../../image/icon-home-o.png) no-repeat;
+  background-size: 6.4vw 6.4vw;
+  background-position: center 1.333vw;  
+}
+.link-sms a {
+  background: url(../../image/icon-sms.png) no-repeat;  
+}
+.link-sms.active a{
+  color: #ec7e2d;
+  background: url(../../image/icon-sms-o.png) no-repeat;
+  background-size: 6.4vw 6.4vw;
+  background-position: center 1.333vw;  
+}
+.link-search a {
+  background: url(../../image/icon-buy.png) no-repeat;  
+}
+.link-search.active a{
+  color: #ec7e2d;
+  background: url(../../image/icon-buy-o.png) no-repeat;
+  background-size: 6.4vw 6.4vw;
+  background-position: center 1.333vw;  
+}
+.link-cart a {
+  background: url(../../image/icon-cart.png) no-repeat;  
+}
+.link-cart.active a{
+  color: #ec7e2d;
+  background: url(../../image/icon-cart-o.png) no-repeat;
+  background-size: 6.4vw 6.4vw;
+  background-position: center 1.333vw;  
+}
+.link-user a {
+  background: url(../../image/icon-member.png) no-repeat;  
+}
+.link-user.active a{
+  color: #ec7e2d;
+  background: url(../../image/icon-member-o.png) no-repeat;
+  background-size: 6.4vw 6.4vw;
+  background-position: center 1.333vw;  
+}
+.footbar a {
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 3.2vw;
+  background-size: 6.4vw 6.4vw;
+  background-position: center 1.333vw;
+	padding-top: 8.267vw;
+	text-decoration: none;
+}

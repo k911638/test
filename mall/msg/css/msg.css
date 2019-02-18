@@ -1,0 +1,137 @@
+body{margin: 0;font-size: 12px;color: #333;}li{list-style: none;}h5,ul,p,li,img{margin: 0;padding: 0;}em{font-style:normal;}
+	.clearfix:after{content:'';display: table;}
+	.fr{float: right;}
+	.con{
+		position: absolute;
+		top: 0;right: 0;bottom: 0;left: 0;
+	}
+	.header{
+		font-size: 14px;
+		height: 2.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom:1px solid #dbdbdb;
+	}
+	
+	.fenxiang img{width: 1.0rem;height: 1.0rem;margin-right: 0.5rem;}
+	
+	
+
+	.center{
+		position: absolute;
+		left: 0;right: 0;top: 2.5rem;bottom: 2.5rem;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.list li{
+		width: 17.55rem;
+		height: 2.55rem;
+		margin: 0.8rem 0.6rem 0;
+		display: flex;
+	}
+	.list li div{
+		width: 14.38rem;
+		height: 2.55rem;
+		margin-left: 0.6rem;
+	}
+	.list li h5{
+		width: 14.36rem;
+		font-size: 14px;
+		margin: 0.2rem 0;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	.list li h5 em{
+		font-size: 12px;
+		font-weight:normal;
+	}
+	.list li p{
+		width: 14.36rem;
+		font-size: 12px;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+
+	.list img{
+		width: 2.55rem;
+		height: 2.55rem;
+	}
+
+
+	.footer{
+		width: 18.75rem;
+		height: 2.5rem;
+		position: absolute;
+		left: 0;right: 0;bottom: 0;
+		border-top:1px solid #dbdbdb;
+		background-color: #fff;
+		display: flex;
+		flex-flow: center center;
+	}
+	.footer ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex:1 1;
+	}
+
+
+
+
+	.index img,.xiaoxi img,.shop img,.shoping img,.my img{
+		width: 1.2rem;
+		height: 1.2rem;
+	}
+
+
+
+
+
+
+	.pop_window{
+		position: absolute;
+		top: 0;right: 0;bottom: 0;left: 0;
+		z-index: 8889;
+		background-color: rgba(0,0,0,0.3);
+		display: none;
+	}
+	.pop_window div{
+		position: relative;
+		width: 5.0rem;
+		height: 5.0rem;
+		background-color: #fff;
+		margin: 14.2rem auto 0;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.3rem;
+		color: red;
+	}
+	.pop_window div input{
+		background-color: gold;
+		border-radius: 0.3rem;
+		box-shadow: 0px 0px 10px 2px red inset;
+		animation: loading 200ms ease 0s infinite alternate;
+	}
+	.pop_window div img{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	
+
+	@keyframes loading{
+		from{
+			background-color: gold;
+		}
+		to{
+			background-color: red;
+		}
+	}

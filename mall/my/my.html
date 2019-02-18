@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>个人中心</title>
+	<link rel="stylesheet" type="text/css" href="./css/member.css">
+	<style type="text/css">
+		.pop_window{
+		position: absolute;
+		top: 0;right: 0;bottom: 0;left: 0;
+		z-index: 8889;
+		display: none;
+	}
+	.pop_window div{
+		position: relative;
+		width: 5.0rem;
+		height: 5.0rem;
+		background-color: #f4f4f4;
+		margin: 14.2rem auto 0;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0.3rem;
+		box-shadow: 0px 0px 20px 5px pink inset;
+		color: red;
+	}
+	.pop_window div input{
+		background-color: gold;
+		border-radius: 0.3rem;
+		box-shadow: 0px 0px 10px 2px red inset;
+		animation: loading 200ms ease 0s infinite alternate;
+	}
+	.pop_window div img{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	
+
+	@keyframes loading{
+		from{
+			background-color: gold;
+		}
+		to{
+			background-color: red;
+		}
+	}
+	</style>
+	<script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+<body>
+	<div class="member_center">
+		<div class="portrait_bg"><img src="../image/member_head_bg.png"></div>
+		<div class="portrait"><a href="member_info.html"><img id="portrait" src=""></a></div>
+		<div class="nickname"></div>
+		<div class="set"><a href="member_set.html"></a></div>
+		<div class="order_bg"></div>
+		<div class="order">
+			<div class="order_head"><a class="order_total" href="../order/member_order.html">查看全部订单</a><div class="order_my">我的订单</div></div>
+            <div class="order_list">
+				<ul>
+					<li><a class="order_conduct" href="../order/member_order.html?typeid=3">进行中</a></li>
+					<li><a class="order_examine" href="../order/member_order.html?typeid=2">待审核</a></li>
+					<li><a class="order_complete" href="../order/member_order.html?typeid=4">已完成</a></li>
+					<li><a class="order_cancel" href="../order/member_order.html?typeid=5">已取消</a></li>
+					<li><a class="order_refund" href="../order/order_refund.html">退款/售后</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="member_list">
+			<ul>
+				<li><a class="member_add" href="my_shouhuo.html"><img src="../image/member_more.png">收货地址</a></li>
+				<li><a class="member_operation" href="member_info_operation.html"><img src="../image/member_more.png">营运中心</a></li>
+				<li><a class="member_task" href="../myTask/myTask.html"><img src="../image/member_more.png">我的任务</a></li>
+				<li><a class="member_authentication" href="member_info_authentication.html"><img src="../image/member_more.png">申请认证</a></li>
+				<li><a class="member_wallet" href="#"><img src="../image/member_more.png">我的钱包</a></li>
+				<li><a class="member_customer" href="#"><img src="../image/member_more.png">联系客服</a></li>
+				<li><a class="member_record" href="../historyrRecord/historical.html"><img src="../image/member_more.png">历史记录</a></li>
+				<li><a class="member_safe" href="../accountSecurity/account.html"><img src="../image/member_more.png">账户安全</a></li>
+				<li><a class="member_buy" href="#"><img src="../image/member_more.png">我的去哪买</a></li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div class="footer">
+		<ul>
+			<li class="index"><img src="../image/shouye.png" alt="首页"></li>
+			<li>首页</li>
+		</ul>
+		<ul>
+			<li class="xiaoxi"><img src="../image/xiaoxi2.png" alt="消息"></li>
+			<li>消息</li>
+		</ul>
+		<ul>
+			<li class="shop"><img src="../image/mai.png" alt="购买"></li>
+			<li>购买</li>
+		</ul>
+		<ul>
+			<li class="shoping"><img src="../image/gouwuche.png" alt="购物车"></li>
+			<li>购物车</li>
+		</ul>
+		<ul class="">
+			<li class="my"><img src="../image/myselate.png" alt="我的"></li>
+			<li>我的</li>
+		</ul>
+	</div>
+
+
+	<div class="pop_window">
+		<div>
+			<img src="../image/exit.png">
+			<p>请先登录</p>
+			<input type="button" name="" value="去登录">
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="../js/jquery2.24.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/public/ajax.js"></script>
+<script type="text/javascript" src="./js/my.js"></script>
+</body>
+</html>

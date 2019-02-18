@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>个人信息</title>
+    <link rel="stylesheet" type="text/css" href="./css/member.css">
+     <style type="text/css">
+        /*弹窗*/
+    .pop_window1{
+        position: absolute;
+        top: 0;right: 0;bottom: 0;left: 0;
+        z-index: 8889;
+        display: none;
+    }
+    .pop_window1 div{
+        width: 6.6rem;
+        height: 6.6rem;
+        margin:15rem auto 0;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 0.3rem;
+    }
+    </style>
+    <script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+
+<body id="body">
+    <div class="member_con">
+        <div class="member_header">
+            <span class="member_fanhui">返回</span>个人信息
+        </div>
+
+        <div class="center">
+            <div class="member_info">
+                <ul>
+                    <li class="member_info_head"><span><input type="file" accept="image/*" id="takepicture"><img src="../image/portrait.jpg" alt="头像" id="portrait"></span>头像<div></div>
+                    </li>
+                    <li class="member_nickname"><span class="nickname">邻阿姨</span>昵称<div></div>
+                    </li>
+                    <li class="member_birthday"><span>1980-8-8</span>生日<div></div>
+                    </li>
+                    <li class="member_sex"><span>女</span>性别<div></div>
+                    </li>
+                    <!--<li class="member_site"><span></span>住址<div></div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="choicepor">
+        <div class="choicebg"></div>
+        <div class="choice_portrait">
+            <div id="portraitShot"><input type="file" accept="image/*" capture="camera" id="takepicture">拍摄</div>
+            <div id="album"><input id="pic_album" type="file" accept="image/*" multiple>从手机相册选择</div>
+            <div class="cancel_portrait">取消</div>
+        </div>
+    </div>-->
+
+
+
+<div class="pop_window1"><div>弹框</div></div>
+
+
+
+    <script type="text/javascript" src="../js/jquery2.24.js"></script>
+    <script type="text/javascript" src="../js/public/ajax.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/member_info.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <title>订单详情</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/member_order_detail.css">
+</head>
+
+<body>
+  <div class="member_con" id="app" v-if="data">
+    <div class="header"><span class="member_fanhui" @click="goback()">返回</span>订单详情</div>
+      
+    <div class="page-con">
+      <div class="order_bar">
+        <div class="progress_bar">
+          <template v-if="data.userStatus === 'PUBLISHING_PROCUREMENT'">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <em class="state_1 active">已接单</em>
+            <em class="state_2">采买中</em>
+            <em class="state_3">配送中</em>
+            <em class="state_4">已收货</em>
+          </template>
+          <template v-if="data.userStatus === 'PROCURING'">
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <em class="state_1 active">已接单</em>
+            <em class="state_2 active">采买中</em>
+            <em class="state_3">配送中</em>
+            <em class="state_4">已收货</em>
+          </template>
+          <template v-if="data.userStatus === 'DELIVERING'">
+            <ul>
+                <li class="active"></li>
+                <li class="active"></li>
+                <li></li>
+            </ul>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+            <em class="state_1 active">已接单</em>
+            <em class="state_2 active">采买中</em>
+            <em class="state_3 active">配送中</em>
+            <em class="state_4">已收货</em>
+          </template>
+          <template v-if="data.userStatus === 'FINISHED'">
+            <ul>
+                <li class="active"></li>
+                <li class="active"></li>
+                <li class="active"></li>
+            </ul>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <em class="state_1 active">已接单</em>
+            <em class="state_2 active">采买中</em>
+            <em class="state_3 active">配送中</em>
+            <em class="state_4 active">已收货</em>
+          </template>
+          <template v-if="data.userStatus === 'CANCELED'">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <em class="state_1">已接单</em>
+            <em class="state_2">采买中</em>
+            <em class="state_3">配送中</em>
+            <em class="state_4">已收货</em>
+          </template>
+        </div>
+      </div>
+  
+      <div class="address">
+        <div class="clearfix">收货人：{{data.receiverName}}<span class="fr">电话号码：{{data.mobile}}</span>
+          <p>收货地址：{{data.address}}</p>
+        </div><em></em>
+      </div>
+  
+      <div class="order_list">
+        <div class="order_list_top bd_bottom clearfix"><span v-if="data.userStatus === 'PUBLISHING_PROCUREMENT'">正在发布采买任务</span>
+          <span v-else-if="data.userStatus === 'PROCURING'">商品采购中</span>
+          <span v-else-if="data.userStatus === 'DELIVERING'">配送中</span>
+          <span v-else-if="data.userStatus === 'FINISHED'">已完成</span>
+          <span v-else-if="data.userStatus === 'CANCELED'">已取消</span>{{data.createDate}}</div>
+        <div class="goods_list">
+          <ul>
+              <li v-for="product in data.shoppingCarList" :key="product.goodsSkuId">
+                  <img :src="product.goodsSkuImage">
+                  <div class="goods_h3">{{product.goodsName}}</div>
+                  <div class="goods_price">
+                      <ul>
+                          <li>最低价：{{product.minPrice}}元<span>{{product.minSupermarketName}}</span></li>
+                          <li>最高价：{{product.maxPrice}}元<span>{{product.maxSupermarketName}}</span></li>
+                      </ul>
+                  </div>
+                  <div class="goods_spread">价差率：{{product.spreadRate}}%</div>
+                  <div class="goods_num">数量：×{{product.quantity}}</div>
+                  <div class="goods_total">合计：￥{{product.heJiPrice}}</div>
+              </li>
+          </ul>
+        </div>
+        <div class="goods_cost bd_bottom">
+            <ul>
+                <li>商品总价<span>{{data.goodsTotalPrice}}元</span></li>
+                <li>服务费<span>{{data.serviceFeeString}}元</span></li>
+                <li>附加费用<span>{{data.extraFeeString}}元</span></li>
+                <li>合计<span>{{data.totalPrice}}元</span></li>
+            </ul>
+        </div>
+        <div class="real_price clearfix"><span></span><em></em>实付<p>{{data.totalPrice}}元</p></div>
+      </div>
+  
+      <div class="order_detail">
+          <div class="detail_title"><em></em>订单详情</div>
+          <div class="detail_list bd_bottom">
+              <ul>
+                <li><span>订单备注：</span>{{data.remark}}</li>
+                <li><span>订单编号：</span>{{data.ordersId}}</li>
+                <li><span>支付编号：</span>{{data.payNumber}}</li>
+                <li><span>创建时间：</span>{{data.createDateStr}}</li>
+                <li><span>发货时间：</span>{{data.deliveryTime}}</li>
+                <li><span>收货时间：</span>{{data.receiptTime}}</li>
+                <!--<li><span>投诉网点：</span>{{data.communityName}}<em></em></li>-->
+              </ul>
+          </div>
+          <div class="detail_btn">
+              <ul>
+                  <li>
+                      <a :href="'tel:' + data.serviceMobile" class="btn_public btn_customer">联系客服</a>
+                  </li>
+                  <li>
+                      <a :href="'tel:' + data.communityPhone" class="btn_public btn_dot">联系网点</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>    
+
+    <div class="footer_btn">
+        <ul><template v-if="data.userStatus === 'PUBLISHING_PROCUREMENT'">
+              <li></li>
+              <li></li>
+              <li><button type="submit" id="take_all" @click="btnCancel()">取消订单</button></li>
+            </template>
+            <template v-else-if="data.userStatus === 'PROCURING'">
+              <li></li>
+              <li></li>
+              <li><button type="submit" id="take_all" @click="btnOk()">确认收货</button></li>
+            </template>
+            <template v-else-if="data.userStatus === 'DELIVERING'">
+              <li></li>
+              <li></li>
+              <li><button type="submit" id="take_all" @click="btnOk()">确认收货</button></li>
+            </template>
+            <template v-else-if="data.userStatus === 'FINISHED'">
+              <li></li>
+              <li></li>
+              <li><button type="submit" id="take_all" @click="btnBuy()">再次购买</button></li>
+            </template>
+            <template v-else-if="data.userStatus === 'CANCELED'">
+              <li></li>
+              <li></li>
+              <li><button type="submit" id="take_all" @click="btnBuy()">继续购买</button></li>
+            </template>
+        </ul>
+    </div>
+  </div>    
+
+  <script type="text/javascript" src="../js/vue.js"></script>
+  <script type="text/javascript" src="../js/axios.min.js"></script>
+  <script src="../js/fetch.js"></script>
+  <script type="text/javascript" src="js/member_order_detail.js"></script>
+  <script type="text/javascript" src="../js/check.js"></script>
+
+</body>
+
+</html>

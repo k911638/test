@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>邻阿姨(LAY.COM)-去哪买,超市比价,附近差价排行,邻居互助</title>
+</head>
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="stylesheet" type="text/css" href="./css/public/check.css">
+<script type="text/javascript" src="./js/set_root.js"></script>
+	
+<body id="body">
+	<div class="container">
+  		<div class="center">
+			<div class="slide_con">
+				<div class="next"><img src="./image/next.png"></div>
+				<div class="prev"><img src="./image/prev.png"></div>
+				<ul class="points"></ul>
+				<ul class="slide">
+
+					<li><a href="./spokesman/spokesman.html"><img src="./image/banner1.jpg" alt="优惠"></a></li>
+					<li><a href="./spokesman/spokesman.html"><img src="./image/banner2.jpg" alt="优惠"></a></li>
+					<li><a href="./spokesman/spokesman.html"><img src="./image/youhui2.jpg" alt="优惠"></a></li>
+					<li><a href="./spokesman/spokesman.html"><img src="./image/youhui3.jpg" alt="优惠"></a></li>
+					<li><a href="./spokesman/spokesman.html"><img src="./image/youhui4.jpg" alt="优惠"></a></li>
+				</ul>
+			</div>
+			<div class="text1_con">
+				<div><a href="search/search.html"><img src="./image/woyaozai.jpg" alt="去哪买"></a></div>
+				<div><a href="#"><img src="./image/chufangzhigong.jpg" alt="厨房直供"></a></div>
+				<div><a href="#"><img src="./image/linjvhuzhu.jpg" alt="邻居互助"></a></div>
+				<div><a href="#"><img src="./image/zhinengzhijia.jpg" alt="智能之家"></a></div>
+			</div>
+
+			<ul class="text2_con">
+				<li class="text2_1"><a href="/priceRanking/priceRanking.html"><img src="./image/jiachapaihang.jpg"></a></li>
+				<li class="text2_2">
+					<div class="text2_3"><a href="#"><img src="./image/liaojiequnamai.jpg"></a></div>
+					<div class="text2_4">
+						<div><a href="#"><img src="./image/zhoubianchaoshi.jpg"></a></div>
+						<div><a href="#"><img src="./image/tuijianshangpin.jpg"></a></div>
+					</div>
+				</li>
+			</ul>
+			<p class="zixun">去哪买资讯</p>
+			<div class="text3_con">
+				<div><a href="#"><img src="./image/guanyuwomen.jpg"></a></div>
+				<div><a href="#"><img src="./image/guanyuwomen.jpg"></a></div>
+				<div><a href="#"><img src="./image/guanyuwomen.jpg"></a></div>
+				<div><a href="#"><img src="./image/guanyuwomen.jpg"></a></div>
+			</div>
+			
+		</div>
+
+
+
+		<div class="footer">
+			<ul>
+				<li class="index"><img src="./image/shouyeselate.png"></li>
+				<li>首页</li>
+			</ul>
+			<ul>
+				<li class="xiaoxi"><img src="./image/xiaoxi2.png"></li>
+				<li>消息</li>
+			</ul>
+			<ul>
+				<li class="shop"><img src="./image/mai.png"></li>
+				<li>购买</li>
+			</ul>
+			<ul>
+				<li class="shoping"><img src="./image/gouwuche.png"></li>
+				<li>购物车</li>
+			</ul>
+			<ul>
+				<li class="my"><img src="./image/my.png"></li>
+				<li>我的</li>
+			</ul>
+		</div>
+
+	<div class="pop_window10"><div>暂无服务，敬请期待</div></div>
+
+	</div>
+
+
+
+	<script type="text/javascript" src="./js/jquery2.24.js"></script>
+	<script type="text/javascript" src="./js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $pop10 = $('.pop_window10');//提示框
+			var $pop_window = $(".pop_window");
+			$(".footer").delegate('ul', 'click', function(){
+				var ix = $(this).index();
+				switch(ix){
+					case 0:
+					return;
+					break;
+					case 1:
+					window.location.href="msg/msg.html";
+					break;
+					case 2:
+					window.location.href="search/search.html";
+					break;
+					case 3:
+					window.location.href="shopping/shopping.html";
+					break;
+					case 4:
+					window.location.href = "my/my.html";
+				}
+				
+			});
+			// 下面是轮播图
+			var $li=$('.slide li');
+			var len=$li.length;
+			var nowli=0;
+			var prevli=0;
+			var timer=null;
+			//初始化,根据轮播图生成小圆点	
+			var	point=$('.points');
+			$li.not(':first').css({left:"18.75rem"});
+			$li.each(function(index) {
+				var $sli=$('<li>');
+				$sli.appendTo(point);
+				if (index==0) {
+					$sli.addClass('points_active');
+				}
+			});
+			//点击滑动图片
+			var $points=$('.points li');
+			$points.click(function() {
+				nowli=$(this).index();
+				move();
+				$(this).addClass('points_active').siblings().removeClass('points_active');
+			});
+			//点击上一张或下一张
+			var $next=$('.next');
+			$next.click(function (){
+				nowli++;
+				move();
+				$points.eq(nowli).addClass('points_active').siblings().removeClass('points_active');
+			});
+			var $prev=$('.prev');
+			$prev.click(function(){
+				nowli--;
+				move();
+				$points.eq(nowli).addClass('points_active').siblings().removeClass('points_active');
+			});
+			//自动播放
+			timer=setInterval(autoplay,3000);
+			var $con=$('.slide_con');
+			$con.mouseenter(function(){   //mouseenter鼠标移入不触发事件冒泡
+				clearInterval(timer);
+			});
+			$con.mouseleave(function(){
+				timer=setInterval(autoplay,3000);
+			});
+
+			function autoplay(){
+				nowli++;
+				move();
+				$points.eq(nowli).addClass('points_active').siblings().removeClass('points_active');
+			}
+
+			function move(){
+				if(nowli<0){
+					nowli=len-1;
+					$li.eq(nowli).css({left:"-18.75rem"});
+					$li.eq(prevli).stop().animate({left:"18.75rem"});
+					$li.eq(nowli).stop().animate({left:0});
+					prevli=nowli;
+					return;
+				}
+				if(nowli>len-1){
+					nowli=0;
+					$li.eq(nowli).css({left:"18.75rem"});
+					$li.eq(prevli).stop().animate({left:"-18.75rem"});
+					$li.eq(nowli).stop().animate({left:0});
+					prevli=nowli;
+					return;
+				}
+				if (nowli>prevli) {
+					$li.eq(nowli).css({left:"18.75rem"});
+					$li.eq(prevli).stop().animate({left: "-18.75rem"});
+					$li.eq(nowli).stop().animate({left:0});
+					prevli=nowli;
+					return;
+				}
+				if(nowli<prevli){
+					$li.eq(nowli).css({left:"-18.75rem"});
+					$li.eq(prevli).stop().animate({left:"18.75rem"});
+					$li.eq(nowli).stop().animate({left:0});
+					prevli=nowli;
+				}
+			}
+
+			//暂无服务
+			$(".center").delegate('a', 'click', function() {
+				const hrefs = $(this).attr("href");
+				if(hrefs=="#" || hrefs=="" || hrefs==undefined){
+					pop_win10();
+				}
+			});
+			//提示弹框
+			function pop_win10(){
+				$pop10.show(function() {
+					const this_ = $(this);
+					setTimeout(function(){
+						this_.hide();
+					},800);
+				});	
+			}
+			$pop10.click(function() {
+				$(this).hide();
+			});
+			
+			//check 登录
+		    var paramUrl = window.location.href;
+		    var accessToken = $.cookie('accessToken');
+		    var accountId = $.cookie('accountId');
+			var userId = $.cookie('userId');
+		    if (paramUrl.indexOf("accessToken") != -1 && paramUrl.indexOf("accountId") != -1 && paramUrl.indexOf("?") != -1) {
+		        var resultStr = paramUrl.substr(paramUrl.indexOf("?") + 1);
+		        var arr = resultStr.split("&");
+		        accessToken = arr[0].split("=")[1];
+		        accountId = arr[1].split("=")[1];
+		        userId = arr[2].split("=")[1];
+		        $.cookie('accessToken', accessToken, { expires: 7,path: '/' });
+		        $.cookie('accountId', accountId, { expires: 7,path: '/' });
+		        $.cookie('userId', userId, { expires: 7,path: '/' });
+		        $('.pops_window').hide();
+		        return
+		    }
+			//如果没有token
+		    if (!accessToken || accessToken == "" || !accountId || accountId == "" || !userId || userId=="") {
+		        	// setTimeout(function(){
+		        	// 	window.location.href = "register/register0.html";
+		        	// },3500)
+		        	$pop_window.show();
+		            
+		        }
+			//弹框确认
+			$(".pop_window input").click(function() {
+				$pop_window.hide();
+				window.location.href = "register/register0.html";
+			});
+			$(".pop_window img").click(function() {
+				$pop_window.hide();
+			});
+		    
+		});
+	</script>
+</body>
+</html>

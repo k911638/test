@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>申请退款</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/member_order_refund.css">
+    <script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+
+<body>
+    <div class="member_con">
+        <div class="bankcard_header bd_bottom">
+            <span class="member_fanhui">返回</span>申请退款
+        </div>
+
+        <div class="rejection_list">
+            <ul>
+                <li>拒收原因：<div id="reason"></div><i class="reason">请选择</i></li>
+                <li>拒收说明：<input type="text" placeholder="选填"></li>
+            </ul>
+            <div class="voucher">
+                <h3>凭证</h3>
+                <h5>图案清晰，没有遮挡、涂抹</h5>
+                <div id="idcard1" class="idcard"><img src="" id="idcardf"><input id="idcard_front" type="file"
+                        accept="image/*" capture="camera"></div>
+            </div>
+            <button type="submit">提交申请</button>
+        </div>
+    </div>
+
+    <div class="relayer">
+        <div class="relayerbg"></div>
+        <div class="re_layer">
+            <div class="btn_layer"><em id="btn_cancel">取消</em><em id="btn_ok">确定</em></div>
+            <ul>
+                <li><span>产品过期</span><input type="radio" name="reason" id="reason1" /><label for="reason1"></label></li>
+                <li><span>产品装破损</span><input type="radio" name="reason" id="reason2" /><label for="reason2"></label></li>
+                <li><span>规格不符</span><input type="radio" name="reason" id="reason3" /><label for="reason3"></label></li>
+                <li><span>品牌不符</span><input type="radio" name="reason" id="reason4" /><label for="reason4"></label></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery2.24.js"></script>
+    <script type="text/javascript" src="js/member_order_refund.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+.myTask{
+		min-height: 100vh;
+		background: #F5F5F5;
+	}
+.myTask_header{
+	height: .88rem;
+	width: auto;
+	line-height: .88rem;
+	background: #ffffff;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	border-bottom: 1px solid #d9d9d9; 
+}	
+.myTask_header img{
+	width: .22rem;
+	height: .4rem;
+	padding-left: .24rem;
+}
+.myTask_header span {
+	color: #ec7e2d;
+	/*font-size: 24px;*/
+	font-size: .36rem;
+	/*12px-36px*/
+	padding-left: .1rem;
+}
+.myTask_header a {
+	color: #ec7e2d;
+}
+.myTask_header  h2{
+	font-weight: normal;
+	font-size: .36rem;
+	padding-left: 1.78rem;
+}
+.myTask_center1{
+	height: 1rem;
+	width: auto;
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9; 
+	display: flex;
+	align-items: center;
+}
+.myTask_center1 img{
+	width: .42rem;
+	height: .42rem;
+	padding-left: .33rem;
+}
+.myTask_center1 p{
+	font-size: .28rem;
+	color: #333;
+	padding-left: .33rem;
+	
+}
+#myTask_center1_right{
+	height: .22rem;
+	width: .15rem;
+	padding-left: 4.93rem;
+}
+.myTask_center2{
+	height: 1rem;
+	width: auto;
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9; 
+	display: flex;
+	align-items: center;
+}
+.myTask_center2 img{
+	width: .42rem;
+	height: .42rem;
+	padding-left: .33rem;
+}
+.myTask_center2 p{
+	font-size: .28rem;
+	color: #333;
+	padding-left: .33rem;
+	
+}
+
+.myTask_center3{
+	height: 1rem;
+	width: auto;
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9; 
+	display: flex;
+	align-items: center;
+}
+.myTask_center3 img{
+	width: .48rem;
+	height: .48rem;
+	padding-left: .33rem;
+}
+.myTask_center3 p{
+	font-size: .28rem;
+	color: #333;
+	padding-left: .28rem;
+	
+}
+
+.myTask_center4{
+	height: 1rem;
+	width: auto;
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9; 
+	display: flex;
+	align-items: center;
+}
+.myTask_center4 img{
+	width: .52rem;
+	height: .52rem;
+	padding-left: .33rem;
+}
+.myTask_center4 p{
+	font-size: .28rem;
+	color: #333;
+	padding-left: .28rem;
+	
+}

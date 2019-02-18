@@ -1,0 +1,90 @@
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  </script> <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+  <title>价差排行</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="./css/priceRanking.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <span class="header-fanhui" @click="goback()">返回</span>
+      <em>价差排行</em>
+    </div>
+
+    <div class="tablist">
+      <ul>
+        <li :class="{active:typeId==1}" @click="changeAll()">综合</li>
+        <li :class="{active:typeId==2}" @click="changeArea()">区域</li>
+        <li :class="{active:typeId==3}" @click="changeCategory()">分类</li>
+        <li :class="{active:typeId==4}" @click="changeBrand()">品牌</li>
+      </ul>
+    </div>
+
+    <div class="list" v-if="goodslist&&goodslist.length>0">
+
+      <div class="shop_content" v-for="goods in goodslist" :key="goods.goodsSkuId">
+        <img class="shop_photo" :src="goods.image" />
+        <div class="shop_info">
+          <h3>{{goods.name}}</h3>
+          <p class="minprice">最低价：{{goods.minPrice}}元 {{goods.minSupermarket}}</p>
+          <p class="maxprice">最高价：{{goods.maxPrice}}元 {{goods.maxSupermarket}}</p>
+          <span class="ranking">差价率：{{goods.spreadRate}}%</span>          
+        </div>
+      </div>
+  
+    </div>
+
+    <div class="brand-input" v-show="typeId==4&&goodslist==null">
+      <input type="text" placeholder="请输入品牌关键字" v-model="sreachValue" ref="sreachInput">
+      <div class="brand-layer" v-show="sreachValue&&brandlist&&brandlist.length>0" :style="Style">
+        <ul>
+          <li v-for="(brand,index) in brandlist" :key="brand.brandId" @click="getBrand(index)">{{brand.name}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="popup-regions-box">
+      <div class="ui-mask" v-show="dialogShow"></div>
+      <transition name="bottom-up">
+        <div class="ui-pop" v-show="dialogShow">
+          <div class="ui-pop-close" @click="close()">
+            <a>
+              <i class="icon-close"></i>
+            </a>
+          </div>
+          <div class="ui-pop-conten">
+            <div class="region-tab">
+              <span
+                v-for="(item,index) in regions"
+                :key="index"
+                :class="{active:index==curIndex}"
+                @click="changeTab(index)">{{item.name}}</span>
+            </div>
+            <div class="region-list">
+              <dl class="rl1">
+                <dd
+                  v-for="list in curList"
+                  :key="list.id"
+                  @click="select(list)">{{list.name}}</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script src="../js/axios.min.js"></script>
+  <script src="../js/fetch.js"></script>
+  <script src="./js/priceRanking.js"></script>
+  <script type="text/javascript" src="../js/check.js"></script>
+</body>
+</html>

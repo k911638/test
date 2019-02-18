@@ -1,0 +1,623 @@
+body{margin: 0;font-size: 13px;color: #333;overflow: hidden;}li{list-style: none;}h1,h2,h3,h4,ul,p,li,img{margin: 0;padding: 0;}em{font-style: normal;}
+.clearfix:before{content:'';display: table;}
+	.zong{
+		position: absolute;
+		top: 0;right: 0;bottom: 0;left: 0;
+		overflow-x:hidden;
+		overflow-y: auto;
+	}
+	.header{
+		height: 2.5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom:0.01rem solid #F4F4F4;
+	}
+	#body .titles{
+		margin-left: -2rem;
+	}
+	.fanhui{display: flex;align-items: center;}
+	.fanhui span{
+		color: #ec7e2d; 
+		padding-left: 0.3rem;
+		}
+	.fanhui img{ width: 18%; height: auto; margin-left: 0.5rem;}
+	.titles{font-size: 20px;}
+	.bianji{margin-right: 0.6rem;}
+
+.cen{
+	/*position: absolute;*/
+	
+	width: 18.75rem;
+	height: 1.8rem;
+	background: rgb(236,126,45);
+	color: rgb(255,255,255);
+
+	text-align: center;
+	line-height: 1.8rem;
+	
+	}
+.dizhzi{
+		width: 18.75rem;
+		height: 4.2rem;
+	   background-color: #FFFFFF;
+	   border-bottom: 0.24rem solid #eee;
+}
+.dizhzi > div{ 
+	display: flex;
+}
+.dizhzi-pic { 
+	flex: 2; 
+	padding: 1.5rem 0.6rem 0;
+	}
+.dizhzi-pic img{ width: 100%; height: auto;}
+
+.dizhzi-right {
+	flex:36; 
+	flex-wrap: nowrap;
+	margin-left: 0.2rem;
+	/*align-items: center;*/
+	}
+
+.dizhzi-right h2 {
+	font-size: 13px;
+	color: rgb(50,51,51);
+    font-weight: normal;
+    padding-top: 0.9rem;
+   }
+   .dizhzi-right h2 span{
+   	padding-left: 3.0rem;
+   }
+.dizhzi-right p{
+	color: rgb(50,51,51);
+	font-style: normal;
+	flex-wrap: wrap;
+	line-height: 0.8rem;
+	padding-top: 0.25rem;
+	padding-right: 0.48rem;
+	}
+.tu{
+	margin-top: 1.75rem;
+}	  
+.tu img{
+	width: 45%;
+	height: auto;	
+}
+.qu{
+	width: 18.75rem;
+	height: 1.8rem;
+	text-align: center;
+	border-bottom: 0.24rem solid #eee;
+}
+.pay{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+    align-items: center;
+	color: rgb(50,51,51);
+	padding-left: 0.6rem;
+	}
+.pay p{
+	flex: 1;
+	margin-top: 0.2rem;
+}	
+.pay em{
+	list-style: none;
+	font-style: normal;
+	flex: 1;
+	color: rgb(236,126,45);
+	margin-top: 0.2rem;
+	margin-left: 6.0rem;
+}
+
+.tu-1 img{
+	width: 35%;
+	height: auto;
+	margin-top: 0.55rem;
+	padding-right: 0.6rem;
+}
+#box{
+	position: absolute;
+	width: 18.75rem;
+	height: auto;
+}
+.shop_content{
+	background: #FFFFFF;
+	border-bottom: 0.02rem solid #ddd;
+}
+.shop_content > div {
+	padding:0 0.3rem;
+	display: flex;
+	padding: 0.3rem 0;
+	border-bottom: 0.24rem solid #eee;
+}
+
+.shop_content > div input {
+	flex: 6;
+}
+.shop_content .shop_photo {
+	flex: 16;
+	margin-left: 0.6rem;
+	margin-right: 0.3rem;
+}
+.shop_content .shop_photo img{
+	width: 100%;
+	height: auto;
+	border: 0.02rem solid #ddd;
+}
+
+.shop_content .shop_info {
+	flex: 46;
+	
+}
+.shop_info h3{
+	/*font-weight: normal;*/
+	width: 12.4rem;
+	color: rgb(50,51,51);
+	margin-left: 0.24rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;	
+}
+.shop_info p:nth-child(2){
+	width: 13rem;
+	margin-left: 0.24rem;
+	font-weight: normal;
+	padding-top: 0.24rem;
+	color: rgb(51,51,51);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.shop_info p:nth-child(3){
+	width: 9.5rem;
+	margin-left: 0.24rem;
+	font-weight: normal;
+	padding-top: 0.24rem;
+	color: rgb(51,51,51);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.shop_info span{
+	font-style: normal;
+	margin-top: 0.26rem;
+	
+
+		color: #FF0000;
+}
+.shop_info > div {
+	display: flex;
+	margin-top: 0.16rem;
+	justify-content: space-between;
+}
+.shop1_info h3{
+
+	padding-right: 0.25rem;
+	padding-bottom: 0.12rem;
+}
+.shop1_info{
+	padding-right: 0.25rem;
+}
+
+.count {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: flex-end;
+	 align-items: center;
+	width: 5.8rem;
+	height:auto;
+	margin-top: -1.2rem;
+	/*margin-bottom: 2rem;*/	
+}
+
+.count p{
+
+	color: #5E5E5E;
+	/*padding-right: -24rem;*/
+	/*margin-bottom: -0.5rem;*/
+}
+.count .ss{
+	/*margin-top: -12px;*/
+	padding-left: 1.5rem;
+}
+.count button { width: 33.3333%;}
+.count input { width: 33.3333%; 
+text-align: center;}
+
+.shop_price {
+	width: 7rem;
+	display: flex;
+	align-items: center;
+	margin-left: 0.24rem;
+	/*justify-content: flex-end;*/
+}
+
+.shop_price em{
+	color: rgb(236,126,45);
+	text-align: right;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.dou{
+	width: 100%;
+	padding-top: 0.4rem;
+	
+}
+.dou > div{
+		border-bottom: 0.01rem solid #E5E5E5;
+		padding: 0 0.6rem;
+		height: 2.0rem;
+	/*background: #EEEEEE;*/
+	/*padding-bottom: 10px;*/	
+}
+.dou div p{
+	     height: 0.72rem;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+
+		color: rgb(50,51,51);
+		line-height: 2.0rem;
+		/*margin-bottom: 10px;*/
+		
+} 
+.btom{
+	border-bottom: 0.01rem solid #E5E5E5;
+}
+.dou div img{
+	width: 0.4rem;
+	height: 0.6rem;
+	margin-left: 0.6rem;
+	margin-top: 0.5rem;
+}
+.dou div .sheng{
+	color: rgb(236,126,45);
+}
+.dou > div p span{
+
+		color: #5E5E5E;
+} 
+
+ .ff{
+ 	display: flex;
+	justify-content: flex-end;
+}
+.ff p{
+	margin-right: 1.5rem;
+}
+
+
+.ff1{
+ 	display: flex;
+	justify-content: flex-end;
+}
+
+.ff1 p{
+	margin-right: 0.75rem;
+}
+.ff-t{
+	color: #5E5E5E;
+}
+.ff1 > div {
+	/*width: 200px;*/
+	height: 1.7rem;
+	padding-left: 0.6rem;
+	border: 1px solid #C0C0C0;
+	background: #FFFFFF;
+	margin-left: 0.75rem;
+	border-radius: 1.16rem;
+}
+.ff1 > div > p{
+	margin-top: -0.25rem;
+
+}
+
+.cens{
+
+	line-height: 2.0rem;
+	height: 2.0rem;
+	padding-left: 0.6rem;
+	color: rgb(50,51,51);
+	display: flex;
+	justify-content: flex-start;
+	background: #FFFFFF;
+	margin-top: -5.0rem;
+	border-bottom: 0.01rem solid #E5E5E5;
+}
+.cens input{
+	background: none;
+	line-height: 0.3rem
+	
+}
+.footer {
+	width: 18.75rem;
+	height: 2.28rem;
+	border-top: 0.02rem solid #E5E5E5;
+	margin-top: 0.34rem;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;	
+	padding: 0 0.3rem;
+	display: flex;
+	align-items: center;
+}
+.footer > div {	
+	flex: 2;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-left: 1.0rem;
+}
+.footer > div p{
+
+	padding-right: 1.0rem;
+}
+.footer > div em{
+
+	font-style: normal;
+	color: #f33;
+	}
+
+.footer button {
+
+	width: 4.74rem;
+	height: 2.28rem;
+	border: none;
+	background: #ec7e2d;
+	text-align: center;
+	/*line-height: 1.4rem;*/
+}
+.footer button{
+	color: #FFFFFF;
+
+
+	
+}
+
+
+/*服务费*/
+.zezhao{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 18.75rem;
+	height: 33.35rem;
+
+	/*background: #000000;*/
+	background: rgba(0,0,0,0.5);
+}
+.juzhong{
+	position: absolute;
+	top: 10.5rem;
+	left: 4.0rem;
+	width: 11.15rem;
+	height: 8.55rem;
+	background: #FFFFFF;
+	border-radius: 0.2rem;
+
+}
+.juzhong h2{
+
+	color: rgb(50,51,51);
+	text-align: center;
+	margin-top: 0.6rem;
+	/*margin-bottom: 12px;*/
+}
+.juzhong p{
+
+	color: rgb(51,51,51);
+	text-indent: 2em;
+	margin: 0 1.2rem;
+	margin-top: 0.6rem;
+	margin-bottom: 0.6rem;
+}
+.juzhong .ding{
+	background: #FFFFFF;
+	color: rgb(226,126,48);
+	border: none;
+	width: 11.15rem;
+	height: 2.1rem;	
+	line-height: 0.6rem;
+
+	outline: none;
+	border-top: 0.01rem solid #E3E3E3;
+	
+}
+
+
+/*支付方式*/
+.zezhao-1{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 18.75rem;
+	height: 33.35rem;
+	background: rgba(0,0,0,0.5);
+}
+.juzhong-1{
+	position: absolute;
+	top: 10.5rem;
+	left: 4.0rem;
+	width: 11.15rem;
+	height: 11.15rem;
+	background: #FFFFFF;
+	border-radius: 0.2rem;
+
+}
+.juzhong-1 h2{
+
+	color: rgb(50,51,51);
+	text-align: center;
+	margin-top: 0.6rem;
+	/*margin-bottom: 12px;*/
+}
+.juzhong-1 table{
+	border: none;
+	width: 11.15rem;
+	height: 7.2rem;
+	display: flex;	
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.juzhong-1 tr td{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 11.15rem;
+	border: none;
+
+	/*border-bottom: 0.01rem solid #E5E5E5;*/
+}
+
+.juzhong-1 td img{
+	width: 1.2rem;
+	height: auto;
+	padding-top: 0.2rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+}
+.juzhong-1 td p{
+	width: 5.5rem;
+	padding-right:1.6rem;
+}
+.juzhong-1 td input{
+	width: 0.8rem;
+	height: 0.8rem;
+	outline: none;
+	background: #FFFFFF;
+    border: 0.08rem solid #E3E3E3;
+
+
+}
+.juzhong-1 .ding-1{
+	background: #FFFFFF;
+	color: rgb(226,126,48);
+	border: none;
+	width: 11.15rem;
+	height: 2.1rem;	
+	line-height: 0.6rem;
+
+	outline: none;
+	border-top: 0.01rem solid #E3E3E3;
+	
+}
+
+
+/*配送时间*/
+.zezhao-2{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 18.75rem;
+	height: 33.35rem;
+
+	/*background: #000000;*/
+	background: rgba(0,0,0,0.5);
+}
+.juzhong-2{
+	position: absolute;
+	top: 10.5rem;
+	left: 4.0rem;
+	width: 11.15rem;
+	height: 8.55rem;
+	background: #FFFFFF;
+	border-radius: 0.2rem;
+
+}
+.juzhong-2 h2{
+
+	color: rgb(50,51,51);
+	text-align: center;
+	margin-top: 0.6rem;
+	/*margin-bottom: 12px;*/
+}
+.juzhong-2 p{
+
+	color: rgb(51,51,51);
+	text-indent: 2em;
+	margin: 0 1.2rem;
+	margin-top: 0.6rem;
+	margin-bottom: 0.6rem;
+}
+.juzhong-2 .ding-2{
+	background: #FFFFFF;
+	color: rgb(226,126,48);
+	border: none;
+	width: 11.15rem;
+	height: 2.1rem;	
+	line-height: 0.6rem;
+
+	outline: none;
+	border-top: 0.01rem solid #E3E3E3;
+	
+}
+
+
+/*提交订单*/
+.zezhao-3{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 18.75rem;
+	height: 33.35rem;
+
+	/*background: #000000;*/
+	background: rgba(0,0,0,0.5);
+}
+.juzhong-3{
+	position: absolute;
+	top: 10.5rem;
+	left: 4.0rem;
+	width: 11.15rem;
+	height: 7.05rem;
+	background: #FFFFFF;
+	border-radius: 0.2rem;
+
+}
+.juzhong-3 h2{
+
+	color: rgb(50,51,51);
+	text-align: center;
+	margin-top: 0.6rem;
+	/*margin-bottom: 12px;*/
+}
+.juzhong-3 p{
+
+	color: rgb(51,51,51);
+	text-indent: 2em;
+	margin: 0 24px;
+	margin-top: 0.6rem;
+	margin-bottom: 0.6rem;
+}
+.juzhong-3 .ding-3{
+	background: #FFFFFF;	
+	border: none;
+	width: 11.15rem;
+	height: 2.1rem;	
+	line-height: 0.6rem;
+
+	outline: none;
+	margin-top: 0.3rem;
+	border-top: 0.01rem solid #E3E3E3;
+}
+.juzhong-3 a{
+	text-decoration: none;
+	color: rgb(226,126,48);
+}

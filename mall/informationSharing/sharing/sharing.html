@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>信息分享</title>
+		<link rel="stylesheet" type="text/css" href="css/sharing.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<script src="../../js/set_root.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div class="sharing"  id="sharing">
+			<div class="sharing_header">
+				<img src="../../image/member_fanhui.png"/>
+				<span><a href="../../myTask/myTask.html">返回</a></span>
+				<h2>信息分享</h2>
+		    </div>
+		    <div class="sharing_center">
+		    	<div class="sharing_center1">
+		    		<div class="sharing_center1_header">
+		    			<p>2018/11/12</p>
+		    			<span>剩余时间: 1:29</span>
+		    		</div>
+		    		<div class="sharing_center1_cen">
+		    			<h3>蓝月亮      洗衣液     3kg    自然清香  </h3>
+		    			<span>温馨提示：请在规定时间内完成商品查询并上传信息</span>
+		    			<button class="sharing_center2_bu1" @click="no" >暂无商品</button>
+		    			<a href="../addInformation/addInformation.html"><button class="sharing_center1_bu2">添加信息</button></a>
+		    		</div>
+		    	</div>
+		    	<div class="sharing_center2">
+		    		<div class="sharing_center2_header">
+		    			<p>2018/11/12</p>
+		    			<span>剩余时间: 1:29</span>
+		    		</div>
+		    		<div class="sharing_center2_cen">
+		    			<h3>蓝月亮      洗衣液     3kg    自然清香  </h3>
+		    			<span>温馨提示：请在规定时间内完成商品查询并上传信息</span>
+		    			<button class="sharing_center2_bu1" @click="no" >暂无商品</button>
+		    			<!--<button class="sharing_center2_bu2">添加信息</button>-->
+		    			<a href="../addInformation/addInformation.html"><button class="sharing_center1_bu2">添加信息</button></a>
+		    		</div>
+		    	</div>
+		    	<div class="sharing_center2">
+		    		<div class="sharing_center2_header">
+		    			<p>2018/11/12</p>
+		    			<span>剩余时间: 1:29</span>
+		    		</div>
+		    		<div class="sharing_center2_cen">
+		    			<h3>蓝月亮      洗衣液     3kg    自然清香  </h3>
+		    			<span>温馨提示：请在规定时间内完成商品查询并上传信息</span>
+		    			<button class="sharing_center2_bu1" @click="no" >暂无商品</button>
+		    			<a href="../addInformation/addInformation.html"><button class="sharing_center1_bu2">添加信息</button></a>
+		    		</div>
+		    	</div>
+		    </div>
+		    
+		    
+		    <div class="sharing_pop" v-show="play">
+		 		<div class="sharing_pop_center">
+		 			<h3>暂无商品</h3>
+		 			<p>此超市无法找到此商品或此商品信息有误？</p>
+		 			<div class="sharing_pop_cancel2"></div>
+		 			<div class="sharing_pop_cancel3"></div>
+		 			<div class="sharing_pop_cancel1">
+		 				<div class="sharing_pop_cancel" @click="cancel">
+		 				取消
+			 			</div>
+			 			<div class="sharing_pop_determine" @click="determine">
+			 				确定
+			 			</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		    
+		    
+		</div>
+		
+		
+		<script src="../../js/layout.js" type="text/javascript" charset="utf-8"></script>
+       <script src="../../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript" src="../../js/axios.min.js"></script>
+	    <script src="js/sharing.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

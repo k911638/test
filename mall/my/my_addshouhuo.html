@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>新增收货地址</title>
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+    <link rel="stylesheet" type="text/css" href="css/sex.css">
+   
+    <script src="js/mobileSelect.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/set_root.js"></script>
+    <style type="text/css">
+        .pop_window{
+        position: absolute;
+        top: 0;right: 0;bottom: 0;left: 0;
+        z-index: 8889;
+            display: none;
+        }
+        .pop_window div{
+            position: relative;
+            width: 5.0rem;
+            height: 5.0rem;
+            background-color: #f4f4f4;
+            margin: 14.2rem auto 0;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.3rem;
+            box-shadow: 0px 0px 20px 5px pink inset;
+            color: red;
+        }
+        .pop_window div input{
+            background-color: gold;
+            border-radius: 0.3rem;
+            box-shadow: 0px 0px 10px 2px red inset;
+        }
+        .pop_window div img{
+            width: 0.8rem;
+            height: 0.8rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .address_con{
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            background-color: rgba(0,0,0,0.3);
+            display: none;
+        }
+        .address_view{
+            margin-top: 3rem;
+            width: 18.75rem;
+            height: 1.1rem;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid #ddd;
+            position: absolute;
+            top: 33.35rem;left: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .address_view p{flex: 1;color: #ec7e2d;text-align: center;}
+        .address_view img{width:0.6rem;height: 0.6rem;position: absolute;right: 0;top: 0;}
+        .address_xuan{
+            margin-top: 4.55rem;
+            width: 18.75rem;
+            height: 33.35rem;
+            display: flex;
+            background-color: #fff;
+            position: absolute;
+            top: 33.35rem;left: 0;
+        }
+        .address_xuan div{
+            padding: 0.2rem 0.8rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .address_xuan p{text-align: center;}
+        .address_xuan em{display: none;}
+    </style>
+</head>
+
+<body>
+    <div class="member_con">
+        <div class="member_header">
+            <span class="member_fanhui">返回</span>新增收货地址
+        </div>
+
+        <div class="editaddress">
+            <ul>
+                <li><span>联系人：</span><input type="text" placeholder="请输入您的姓名" id="user_name"></li>
+                <li><span></span><input type="radio" name="sex" id="male" /><label for="male">先生</label><input type="radio"
+                        name="sex" id="female" checked="checked" /><label for="female" class="add_sex">女士</label></li>
+                <li><span>手机号：</span><input type="text" placeholder="请输入您的手机号" id="phone"></li>
+                <li><span>收货地址：</span><input type="text" name="trigger4" id="trigger4" placeholder="请输入您的地址"><em></em></li>
+                <li><span>详细地址：</span><input type="text" placeholder="请输入您的详细住址" id="menpai"></li>
+            </ul>
+            <button type="button" class="ok">保存地址</button>
+        </div>
+    </div>
+    
+    <div class="address_con">
+        <div class="address_view">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <img src="../image/ranking-close.png">
+        </div>
+        <div class="address_xuan">
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop_window">
+        <div>
+            <img src="../image/exit.png">
+            <p>请先登录</p>
+            <input type="button" name="" value="确认">
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery2.24.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/check.js"></script>
+    <script type="text/javascript" src="js/my_addshouhuo.js"></script>
+
+</body>
+
+</html>

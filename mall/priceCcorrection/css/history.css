@@ -1,0 +1,226 @@
+
+
+
+.history-center{
+		min-height: 100vh;
+		background: #F5F5F5;
+	}
+	.history-header {
+		background: #FFFFFF;
+		width: 7.5rem;
+		height: 1.12rem;
+		line-height: 1.12rem;
+		border-bottom: .12rem solid #F5F5F5;
+		position: relative;
+	}
+	.history-header button{
+		position: absolute;
+		left: .92rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		background: #F4F4F4;
+		border: 1px solid #EC7E2D;
+		border-radius: .12rem;
+		width: 4.57rem;
+		height: .64rem;
+		font-size: .28rem;
+		color: #999999;
+		padding-right: 2.04rem;
+		margin-bottom: .24rem;
+	}
+	.history-header-img{
+		position: absolute;
+		left: 5.60rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 1rem;
+		height: .64rem;
+		border-radius: .12rem;
+		background: #ec7e2d;
+	}
+	.history-header-img img{
+		width: .36rem;
+		height: .36rem;
+		position: absolute;
+		left: .28rem;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+	.history-middle1{
+		background: #FFFFFF;
+	}
+	.history-middle{
+		background: #FFFFFF;
+		position: relative;
+		padding-top: .12rem;
+	}
+	.history-middle-img {
+		background: #d5d5d5;
+		width: 1.96rem;
+		height: 1.96rem;
+		margin-left: .24rem;
+		margin-bottom: .12rem;
+		margin-right: .12rem;
+		margin-top: .1rem;
+	}
+	.history-middle-img img{
+	     height: 1.88rem;
+	     width: 1.21rem;
+	    display: block;
+	    margin: 0 auto;
+	    padding-top: .05rem;
+	}
+	.history-middle {
+		border-bottom: .12rem solid #F5F5F5;
+	}
+	.history-middle h2{
+		font-weight: normal;
+		font-size: .32rem;
+		color: #333333;
+		position: absolute;
+		top: 1rem;
+		left: 2.3rem;
+	}
+	.history-middle > p{
+		font-size: .2rem;
+		color: #666666;
+		position: absolute;
+		top: 1.5rem;
+		left: 2.6rem;
+	}
+	.history-middle button a{
+		color: #FFFFFF;
+	}
+	.history-middle button{
+		width: 1.4rem;
+		height: .48rem;
+		border-radius: .12rem;
+		border: 1px solid #ec7e2d;
+		background: #ec7e2d;
+		font-size: .24rem;
+		color: #FFFFFF;
+		position: absolute;
+		top: 2.3rem;
+		left: 5.8rem;
+	}
+	.history_header{
+	background: #ffffff;
+	width: auto;
+	height: .88rem;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e3e3e3;
+}
+.history_header img{
+	width: .22rem;
+	height: .4rem;
+	padding-left: .24rem;
+}
+.history_header span{
+     font-size:.36rem ;
+     color: #ec7e2d;
+     padding-left: .12rem;
+    display: flex;
+    align-content: center;
+}
+.history_header h2{
+     font-size:.36rem ;
+     color: #333333;
+     font-weight: normal;
+     padding-left: 1.77rem;
+}
+.history-time{
+	height: .6rem;
+	width: auto;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #d9d9d9;
+	padding-left: .24rem;
+}
+.history-time > p{
+	font-size: .24rem;
+	color: #000000;
+}
+.history-time > span{
+	font-size: .24rem;
+	color: #ec7e2d;
+	padding-left: 4.5rem;
+}
+.history-middle >span{
+	font-size: .24rem;
+	color: #333333;
+	position: absolute;
+	top: 2.5rem;
+    left: 2.3rem;
+}
+.history-middle >p{
+	font-size: .24rem;
+	color: #333333;
+	position: absolute;
+    top: 2rem;
+    left: 2.3rem;
+}
+.history_pop{
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.2);
+		position: fixed;
+		top: 0;
+		right: 0;
+}
+.history_pop_center{
+	width: 4.46rem;
+	height: 2.84rem;
+	background: #FFFFFF;
+	border-radius: .12rem;
+	position: absolute;
+	top: 5.25rem;
+	left:1.55rem ;
+}
+.history_pop_center h3{
+    font-weight: normal;
+     font-size: .32rem;
+     color: #333333;
+     text-align: center;
+     padding-top: .24rem;
+}
+.history_pop_center p{
+     font-size: .24rem;
+     color: #333333;
+     text-align: center;
+     padding-top: .48rem;
+}
+.history_pop_cancel{
+	font-size: .32rem;
+     color: #999999;
+     padding-right: .81rem;
+}
+.history_pop_determine{
+	font-size: .32rem;
+     color: #EC7E2D;
+      padding-left: .81rem;
+}
+.history_pop_cancel1{
+	display: flex;
+	padding-top: .7rem;
+	justify-content: center;
+	align-items: center;
+}
+.history_pop_cancel2{
+	width: 4rem;
+	height: 1px;
+	border-top: 1px solid #D9D9D9;
+	background: #D9D9D9;
+    position: absolute;
+    top: 2rem;
+    right: 0.2rem;
+}
+.history_pop_cancel3{
+	width: 2px;
+	height: .79rem;
+	border-top: 1px solid #D9D9D9;
+	background: #D9D9D9;
+    position: absolute;
+    top: 2rem;
+    left: 2.3rem;
+}

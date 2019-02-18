@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>参选代言人</title>
+	<link rel="stylesheet" type="text/css" href="./css/run.css">
+	<script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+<body id="body">
+	<div class="con">
+		<div class="header">
+			<div class="fanhui">
+				<img src="../image/prev1.png">
+				<span>返回</span>
+			</div>
+			<div class="title">参选代言人成就明星之路</div>
+			<div></div>
+		</div>
+
+
+
+
+
+
+		<div class="center">
+			<div class="logo"><img src="../image/logo.png" alt="去哪买"></div>	
+
+			<div class="register_con">
+				
+				<div class="register_window">
+					
+					<form action="" method="post" class="reg_form" id="reg_form">
+						<ul>
+							<li>
+								<h3>参选代言人</h3>
+							</li>
+							<li>
+								<label>姓名：</label>
+								<input type="text" name="name" id="user_name" placeholder="请输入姓名">
+								<span>提示信息</span>
+							</li>
+							<li>
+								<label>手机：</label>
+								<input type="text" name="phone" id="phone" placeholder="请输入手机号码">
+								<span>提示信息</span>
+							</li>
+							<li>
+								<label>特长：</label>
+								<input type="text" name="techang" id="techang" placeholder="输入你的特长,如：跳舞,烹饪">
+								<span>提示信息</span>
+							</li>
+							<li>
+								<label>爱好：</label>
+								<input type="text" name="hobby" id="hobby" placeholder="请输入你的爱好,如：唱歌">
+								<span>提示信息</span>
+							</li>
+							<li>
+								<label>区域：</label>
+								<input type="text" name="ress" id="ress" placeholder="你所在的区域">
+								<span>提示信息</span>
+							</li>
+							<li>
+								<label>格言：</label>
+								<input type="text" name="motto" id="motto" placeholder="你的格言/个人签名">
+								<span>提示信息</span>
+							</li>
+							
+							<li class="agreement">
+								<p>个人照片</p>
+								<input type="file" name="file" id="file">
+								<span class="error_tip">提示信息</span>
+								<div class="addBorder" id="imgDiv">
+								    <img id="imgContent">
+								</div>
+							</li>
+							<li class="reg_sub">
+								<input type="button" value="提交" name="">
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>		
+
+		</div>
+
+
+
+
+
+
+		<div class="footer">
+			<ul>
+				<li class="index"><img src="../image/shouye.png" alt="首页"></li>
+				<li>首页</li>
+			</ul>
+			<ul>
+				<li class="paiming"><img src="../image/paihang.png" alt="排名"></li>
+				<li>排名</li>
+			</ul>
+			<ul class="points_active">
+				<li class="canxuan"><img src="../image/canxuan.png" alt=参选></li>
+				<li>参选</li>
+			</ul>
+			<ul>
+				<li class="guize"><img src="../image/guize.png" alt="规则"></li>
+				<li>规则</li>
+			</ul>
+		</div>
+
+
+
+		<div class="pop_window"><div>提交失败,你已参选</div></div>
+		<div class="pw1_con">
+			<div class="pop_window1" id="pop_window1">
+				<div class="btn_con" id="btn_con">
+					<input type="button" name="" value="取消">
+					<input type="button" name="" value="确定">
+				</div>
+				<hr/>
+				<div data-toggle="distpicker" class="address_content">
+					
+					
+					<select name="recvCity" id="select0">
+						<option value="0">请选择</option>
+						<c:forEach items="${citys }" var="p">
+						<option value="${p.code }">${p.name }</option>
+						</c:forEach>
+					</select>
+					
+					<select name="recvArea" id="select1">
+						<option value="0">请选择</option>
+						<c:forEach items="${areas }" var="c">
+						<c:if test="${c.code != null}">
+						<option value="${c.code }">${c.name }</option>
+						</c:if>
+						<c:if test="${c.code == null }">
+						<option value="${c.code }" selected="selected">${c.name }</option>
+						</c:if>
+						</c:forEach>
+					</select>
+					
+					<select name="recvStreet" id="select2">
+						<option value="0">请选择</option>
+						<c:forEach items="${streets }" var="a">
+						<option value="${a.code }"
+						<c:if test="${a.code == null }">
+						 selected="selected"
+						</c:if>
+						>${a.name }</option>
+						</c:forEach>
+					</select>
+
+					<select name="recvStreet" id="select3">
+						<option value="0">请选择</option>
+						<c:forEach items="${streets }" var="a">
+						<option value="${a.code }"
+						<c:if test="${a.code == null }">
+						 selected="selected"
+						</c:if>
+						>${a.name }</option>
+						</c:forEach>
+					</select>
+				</div> 
+			</div>
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src="../js/jquery2.24.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="./js/run.js"></script>
+
+</body>
+</html>

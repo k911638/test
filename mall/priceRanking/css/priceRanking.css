@@ -1,0 +1,268 @@
+#app {
+  background: #efefef;
+  min-height: 100vh;
+}
+
+.header {
+  height: 13.333vw;
+  background: #fff;
+  position: relative;
+  text-align: center;
+  border: none;
+  line-height: 13.333vw;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #ddd;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.header em {
+  font-style: normal;
+  font-size: 4.267vw;
+}
+
+.header-fanhui {
+  background: url(../../image/member_fanhui.png) no-repeat 3.2vw 4vw;
+  background-size: 2.933vw 5.333vw;
+  display: block;
+  position: absolute;
+  padding-left: 8vw;
+  color: #ec7e2d;
+  font-size: 4.267vw;
+}
+
+.tablist {
+  background: #fff;
+}
+.list {
+  position: relative;
+}
+.list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #efefef;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+.tablist ul {
+  display: flex;
+}
+.tablist ul li {
+  flex: 1;
+  padding-left: 6.4vw;
+  font-size: 3.733vw;
+  height: 8vw;
+  line-height: 8vw;
+  color: #333;
+  background: url(../../image/ranking-b.png) no-repeat;
+  background-size: 2.533vw 1.467vw;
+  background-position: 16vw 3.267vw;
+}
+
+.tablist ul li.active {
+  background: url(../../image/ranking-o.png) no-repeat;
+  background-size: 2.533vw 1.467vw;
+  background-position: 16vw 3.267vw;
+  color: #ec7e2d;
+}
+.tablist ul li:nth-child(1) {
+  background: none;
+}
+.tablist ul li:nth-child(1).active {
+  background: none;
+}
+
+.shop_content {
+	background: #fff;
+	margin-bottom: 1.6vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 30.933vw auto;
+}
+
+img.shop_photo {
+	width: 26.133vw;
+	height: 26.133vw;
+	margin: 1.6vw 1.6vw 1.6vw 3.2vw;
+}
+
+.shop_info {
+	margin: 1.6vw 3.2vw 1.6vw 0;
+	position: relative;
+}
+
+.shop_info h3 {
+	color: rgba(51, 51, 51, 1);
+	font-size: 4.267vw;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+
+.minprice {
+	font-size: 3.2vw;
+  color: rgba(236, 126, 45, 1);
+  margin-top: 3.2vw;
+}
+.maxprice {
+  font-size: 3.2vw;
+  margin-top: 3.2vw;
+}
+
+.ranking {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #ec7e2d;
+  font-size: 4.267vw;
+}
+/* 品牌搜索 */
+.brand-input {
+  background: #fff;
+  height: 12vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-input input {
+  background: #efefef;
+  width: 60vw;
+  height: 8vw;
+  padding: 0 2.4vw;
+  border-radius: 1.6vw;
+  font-size: 3.733vw;
+  color: #666;
+  position: relative;
+}
+.brand-layer {
+  position: fixed;
+  background: #fff;
+  border-radius: 1.6vw;
+  padding: 1.6vw 0;
+  width: 60vw;
+  left: 20vw;
+}
+.brand-layer li {
+  padding: 0 2.4vw;
+  font-size: 3.733vw;
+  height: 8vw;
+  line-height: 8vw;
+}
+/*弹出层*/
+.ui-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  z-index: 100;
+}
+.popup-regions-box .ui-pop {
+  top: 20vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  position: fixed;
+  overflow: hidden;
+  z-index: 101;
+  text-align: left;
+}
+.icon-close {
+  background: url(../../image/fork.png) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 3.2vw;
+  height: 3.2vw;
+}
+.ui-pop-conten {
+  display: grid;
+  grid-template-rows: 8.8vw auto;
+  height: 100%;
+}
+.popup-regions-box .ui-pop .ui-pop-close {
+  display: block;
+  top: 2.667vw;
+  right: 3.2vw;
+  position: absolute;
+  z-index: 1;
+}
+.popup-regions-box .ui-pop .ui-pop-close i {
+  color: #a6a6a6;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 40px;
+}
+.popup-regions-box .ui-pop-title {
+  font-size: 15px;
+  text-align: center;
+  line-height: 50px;
+}
+.popup-regions-box .region-tab {
+  border-bottom: 1px solid #f6f6f6;
+  padding: 0 10px;
+  font-size: 3.733vw;
+  height: 8.8vw;
+  line-height: 8.8vw;
+}
+.popup-regions-box .region-tab span {
+  padding: 0 1vw;
+  width: 16vw;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+}
+.popup-regions-box .region-tab span.active {
+  color: #f60;
+}
+.popup-regions-box .region-tab span.active::after {
+  content: '';
+  position: absolute;
+  left: 3vw;
+  bottom: 0;
+  background: #f60;
+  width: 12vw;
+  height: 1px;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+.popup-regions-box .region-list {
+  overflow: auto;
+  font-size: 3.2vw;
+}
+.popup-regions-box .region-list dl {
+  padding: 5px 10px;
+}
+.popup-regions-box .region-list dd {
+  display: block;
+  padding: 10px 8px;
+}
+.bottom-up-enter-active, .bottom-up-leave-active {
+  transition: all .5s;
+}
+.bottom-up-enter {
+  transform: translateY(100%);
+}
+.bottom-up-enter-to, .bottom-up-leave {
+  transform: translateX(0);
+}
+.bottom-up-leave-to {
+  transform: translateY(100%);
+}

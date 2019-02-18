@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <title>信息分享</title>
+	    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	    <script type="text/javascript" src="../../js/set_root.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/addInformation.css">
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+    </head>
+	<body>
+		
+		<div class="price" id="price">
+			<div class="price_header">
+				<img src="../../image/member_fanhui.png"/>
+				<a href="../sharing/sharing.html"><span>返回</span></a>
+				<h2>信息分享</h2>
+		</div>
+		<div class="price_center">
+			<div class="price_center2">
+				<h3>价格类型:</h3>
+				<input type="text" @click="event"  v-model="value1"
+					id="price_center_input"  placeholder="请选择价格类型"
+					 style="width: 27%;" />
+				<img src="../../image/member_more.png"/>
+			</div>
+			<div class="price_center1" @click="upload1">
+				<h3>开始时间:</h3>
+				<p>2018.10.22 15：20</p>
+				<img src="../../image/member_more.png"/>
+			</div>
+			<div class="price_center1" @click="upload1">
+				<h3>结束时间:</h3>
+				<p>2018.12.22 15：20</p>
+				<img src="../../image/member_more.png"/>
+			</div>
+			<div class="price_center2">
+				<h3>条形码:</h3>
+				<input type="text"  placeholder="请输入条形码" style="width: 23%;" />
+				<img src="../../image/member_more.png"/>
+			</div>
+			<div class="price_center2">
+				<h3>纠错价格:</h3>
+				<input type="text"  placeholder="请输入价格  元" style="width: 20%;" />
+				<img src="../../image/member_more.png"/>
+			</div>
+			<div class="price_center4">
+				<div class="price_center41" >
+					<img src="../../image/price_plus.png"/>
+					<p @click="upload">点击上传照片</p>
+					<button>确认分享</button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="sharing_pop" v-show="play">
+		 		<div class="sharing_pop_center">
+		 			<p class="sharing_pop_center1">拍摄</p>
+		 			<p class="sharing_pop_center2">照片</p>
+		 			<p class="sharing_pop_center3" @click="cancel">取消</p>
+		 		</div>
+		 	</div>
+		
+		
+		<div class="sharing_pop1" v-show="play1">
+		 		<div class="sharing_pop1_center" >
+		 			<p class="sharing_pop1_center1" v-for="(value,index) in valuelist" @click="reverseMessage(index)">{{value.value}}</p>
+		 			<p class="sharing_pop1_center3" @click="cancel1">取消</p>
+		 		</div>
+		</div>
+		
+		<div class="sharing_pop2" v-show="play2" >
+		 		<div class="sharing_pop2_center" >
+		 			<div class="sharing_pop2_center12">
+		 				<div class="sharing_pop2_center1" @click="cancel11">取消</div>
+		 			    <div class="sharing_pop2_center2" @click="cancel11">确定</div>
+		 			</div>
+                     <div class="sharing_pop2_center3">
+                     	<p>2018</p>
+                     	<p>12</p>
+                     	<p>22</p>
+                     	<p>15</p>
+                     	<p>20</p>
+                     </div>
+                     <div class="sharing_pop2_center4" id="box">
+                     	<p>2018</p>年
+                     	<p >12</p>月
+                     	<p >22</p>日
+                     	<p>15</p>:
+                     	<p>20</p>
+                     </div>
+                     <div class="sharing_pop2_center5">
+                     	<p>2018</p>
+                     	<p>12</p>
+                     	<p>22</p>
+                     	<p>15</p>
+                     	<p>20</p>
+                     </div>
+                     <div class="sharing_pop2_center6">
+                     	<p>2018</p>
+                     	<p>12</p>
+                     	<p>22</p>
+                     	<p>15</p>
+                     	<p>20</p>
+                     </div>
+                     <div class="sharing_pop2_center7">
+                     	<p>2018</p>
+                     	<p>12</p>
+                     	<p>22</p>
+                     	<p>15</p>
+                     	<p>20</p>
+                     </div>
+		 		</div>
+		</div>
+		
+		</div>
+	
+		<script type="text/javascript">
+			function time() {
+    var today = new Date();
+    var nian = today.getFullYear(); //年
+    var yue = (today.getMonth() + 1); //月
+    var ri = today.getDate(); //日
+    var shi = today.getHours(); //时
+    var feng = today.getMinutes(); //分
+    var miao = today.getSeconds(); //秒
+    var xingqi = today.getDay();
+
+    var v;
+    if (shi >= 12) {
+        v = "PM";
+    } else {
+        v = "AM";
+    }
+
+    var xingqis;
+    switch (xingqi) {
+        case 1:
+            xingqis = "星期一";
+            break;
+        case 2:
+            xingqis = "星期二";
+            break;
+        case 3:
+            xingqis = "星期三";
+            break;
+        case 4:
+            xingqis = "星期四";
+            break;
+        case 5:
+            xingqis = "星期五";
+            break;
+        case 6:
+            xingqis = "星期六";
+            break;
+        default:
+            xingqis = "星期日";
+    }
+
+    document.getElementById("box").innerHTML = nian + "年" + yue + '月' + ri + "日 " +
+        shi + ':' + feng + ":" + miao + " " + v + " " + xingqis;
+}
+setInterval("time()", 1000);
+		</script>
+		
+	    <script src="../../js/layout.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="../../js/vue.js"></script>
+	    <script type="text/javascript" src="../../js/axios.min.js"></script>
+	    <script src="js/addInformation.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

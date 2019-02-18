@@ -1,0 +1,63 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <title>商品分类</title>
+  <link rel="stylesheet" type="text/css" href="./css/searchCategory.css">
+  <script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+
+<body>
+<div class="buy_con" id="app">
+    <div class="member_header">
+        <span class="member_fanhui" @click="goback()">返回</span><span class="buy_position" @click="getAddress()"></span>商品分类
+    </div>
+
+    <div class="center">
+        <div class="buy_bg">
+            <div class="buy_left">
+                <ul>
+                    <li v-for="(nav,index) in navList" :key="nav.categoryId" :class="{'prolist_current':curIndex == index}" @click="changeIndex(index)">{{nav.name}}</li>
+                </ul>
+            </div>
+            <div class="buy_right">
+
+                <div class="prolist" v-for="(nav,index) in navList" :key="nav.categoryId" v-show="index==curIndex">
+                    <ul>
+                        <li v-for="(two,index) in twoList" :key="two.categoryId" @click="changeTwo(index)">
+                            <div class="prolist_title">{{two.name}}<span></span></div>
+                            <div class="prolist_pro" v-show="index==curTwo">
+                                <ul>
+                                    <li v-for="(goods,index) in goodslist" :key="goods.categoryId"><a :href="'categoryList.html?id=' + goods.categoryId"><img :src="goods.logo" alt="">
+                                        <p>{{goods.name}}</p></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footbar">
+        <ul>
+            <li class="link-home"><a href="../">首页</a></li>
+            <li class="link-sms"><a href="/msg/msg.html">消息</a></li>
+            <li class="link-search active"><a href="/search/search.html">购买</a></li>
+            <li class="link-cart"><a href="/shopping/shopping.html">购物车</a></li>
+            <li class="link-user"><a href="/my/my.html">我的</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript" src="../js/axios.min.js"></script>
+<script src="../js/fetch.js"></script>
+<script type="text/javascript" src="./js/searchCategory.js"></script>
+<script type="text/javascript" src="../js/check.js"></script>
+</body>
+</html>

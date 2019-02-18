@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>成为价格分享员</title>
+    <link rel="stylesheet" type="text/css" href="css/member.css">
+    <link rel="stylesheet" type="text/css" href="css/sex.css">
+    <link rel="stylesheet" type="text/css" href="css/mobileSelect.css">
+    <style>
+
+    </style>
+    <script src="js/mobileSelect.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+
+<body>
+    <div class="member_con">
+        <div class="member_header">
+            <span class="member_fanhui">返回</span>成为价格分享员
+        </div>
+
+        <div class="member_applicant">
+            <ul>
+                <li>姓名<input type="text" data-errorMsg="请输入您的姓名" placeholder="请输入您的姓名"></li>
+                <li>电话<input type="text" data-errorMsg="请输入您的电话" placeholder="请输入您的电话"></li>
+            </ul>
+            <div class="card">
+                <h3>身份证正面</h3>
+                <h5>在有效期内，字迹清晰，没有遮挡、涂抹</h5>
+                <div id="idcard1" class="idcard"><img id="idcardf"><input id="idcard_front" type="file" data-errorMsg="请选择身份证照片正面"  accept="image/*" capture="camera"></div>
+            </div>
+            <div class="card">
+                <h3>身份证正面</h3>
+                <h5>在有效期内，字迹清晰，没有遮挡、涂抹</h5>
+                <div id="idcard2" class="idcard"><img id="idcardb"><input id="idcard_back" type="file" data-errorMsg="请选择身份证照片反面" accept="image/*" capture="camera"></div>
+            </div>
+            <div class="card_ok">提交审核</div>
+        </div>
+        <div class="pop_window10"><div>暂无服务，敬请期待</div></div>
+    </div>
+
+    <script type="text/javascript" src="../js/jquery2.24.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/public/ajax.js"></script>
+    <script type="text/javascript" src="js/member_share.js"></script>
+</body>
+
+</html>

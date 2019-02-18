@@ -1,0 +1,142 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+    <title>全部订单</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/member_order.css">
+</head>
+
+<body>
+    <div class="member_con" id="app">
+      <div class="header">
+          <span class="member_fanhui" @click="goback()">返回</span>{{typeTitle}}
+      </div>
+
+      <div class="order_nav">
+          <ul id="shangpin_type">
+              <li v-for="list in types" :key="list.typeid" :class="{order_current:typeid==list.typeid}" @click="changeTab(list.typeid, list.type)">{{list.name}}<em v-show="list.typeid"></em></li>
+          </ul>
+      </div>
+
+      <div class="page-con">
+        <div v-for="list in types" :key="list.typeid">
+          <transition :name="transitionName">
+            <div v-show="typeid==list.typeid" class="page-con-items">
+              <div class="order_audit_list" v-if="typeid===2">
+                <ul>
+                  <li>
+                      <div class="order_list_top">2018/11/28<span>正在查询商品</span></div>
+                      <div class="order_box">
+                          <div class="order_h3">蓝月亮 洗衣液 3kg 自然清香蓝月亮 洗衣液 3kg 自然清香</div>
+                          <div class="order_tips">温馨提示：您提交的商品正在查询中，请稍后前往此页查看，我们也会将查询结果下发至您的手机，请注意查收。</div>
+                          <button class="order_dot" type="submit">联系网点</button>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="order_list_top">2018/11/28<span>商品查询结果</span></div>
+                      <div class="order_audit_goods clearfix">
+                          <img src="../image/lanyueliang.png">
+                          <div class="order_h3">蓝月亮 洗衣液 3kg 自然清香蓝月亮 洗衣液 3kg 自然清香</div>
+                          <div class="order_min">最低价：99.28元<span>大润发</span></div>
+                          <button class="order_other" type="submit">查看其它超市价格</button><button class="order_cart" type="submit">加入购物车</button>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="order_list_top">2018/11/28<span>正在查询商品</span></div>
+                      <div class="order_box">
+                          <div class="order_h3">蓝月亮 洗衣液 3kg 自然清香蓝月亮 洗衣液 3kg 自然清香</div>
+                          <div class="order_tips">温馨提示：您提交的商品正在查询中，请稍后前往此页查看，我们也会将查询结果下发至您的手机，请注意查收。</div>
+                          <button class="order_dot" type="submit">联系网点</button>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="order_list_top">2018/11/28<span>商品查询结果</span></div>
+                      <div class="order_audit_goods clearfix">
+                          <img src="../image/lanyueliang.png">
+                          <div class="order_h3">蓝月亮 洗衣液 3kg 自然清香蓝月亮 洗衣液 3kg 自然清香</div>
+                          <div class="order_min">最低价：99.28元<span>大润发</span></div>
+                          <button class="order_other" type="submit">查看其它超市价格</button><button class="order_cart" type="submit">加入购物车</button>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="order_list" v-else>
+                  <ul v-if="orderList&&orderList.length>0">
+                      <li v-for="(order,index) in orderList" :key="order.ordersId">
+                          <div class="order_list_top">{{order.createDate}}<span v-if="order.userStatus === 'PUBLISHING_PROCUREMENT'">正在发布采买任务</span>
+                            <span v-else-if="order.userStatus === 'PROCURING'">商品采购中</span>
+                            <span v-else-if="order.userStatus === 'DELIVERING'">配送中</span>
+                            <span v-else-if="order.userStatus === 'FINISHED'">已完成</span>
+                            <span v-else-if="order.userStatus === 'CANCELED'">已取消</span>
+                          </div>
+                          <div class="order_goods clearfix" v-for="product in order.shoppingCarList" :key="product.goodsSkuId" @click="toView(order.ordersId)">
+                              <img :src="product.goodsSkuImage">
+                              <div class="order_h3">{{product.goodsName}}</div>
+                              <div class="order_price">
+                                  <ul>
+                                      <li>最低价：{{product.minPrice}}元<span>{{product.minSupermarketName}}</span></li>
+                                      <li>最高价：{{product.maxPrice}}元<span>{{product.maxSupermarketName}}</span></li>
+                                  </ul>
+                              </div>
+                              <div class="order_spread">价差率：{{product.spreadRate}}%</div>
+                              <div class="order_num">数量：×{{product.quantity}}</div>
+                              <div class="ord_total">合计：￥{{product.heJiPrice}}</div>
+                          </div>
+                          <div class="ord_all">实付：￥{{order.totalPrice}}</div>
+                          <template v-if="order.userStatus === 'PUBLISHING_PROCUREMENT'">
+                            <button class="order_btn_big btn_left" type="submit" @click="btnCancelOrder(index)">取消订单</button>
+                            <a class="order_btn_big" :href="'tel:' + order.communityPhone">联系网点</a>
+                          </template>
+                          <template v-else-if="order.userStatus === 'PROCURING'">
+                            <a class="order_btn_big" :href="'tel:' + order.communityPhone">联系网点</a>
+                          </template>
+                          <template v-else-if="order.userStatus === 'DELIVERING'">
+                            <!--<button class="order_btn_sm btn_left" type="submit">拒收</button>-->
+                            <button class="order_btn_big" type="submit" @click="btnConfirmlOrder(index)">确认收货</button>
+                          </template>
+                          <template v-else-if="order.userStatus === 'FINISHED'">
+                            <!--<button class="order_btn_big btn_left" type="submit">退款售后</button>-->
+                            <button class="order_btn_big" type="submit" @click="btnBuy(index)">再来一单</button>
+                          </template>
+                          <template v-else-if="order.userStatus === 'CANCELED'">
+                            <button class="order_btn_big" type="submit" @click="btnBuy(index)">重新购买</button>
+                          </template>                                    
+                      </li>
+                  </ul>
+                  <div class="no-order" v-if="orderList&&orderList.length==0">您还没有{{typeName}}订单！</div>
+              </div>
+            </div>
+          </transition>
+        </div>
+      </div>
+      
+      <div class="layer" v-show="dialogShow">
+        <div class="layerbg"></div>
+        <div class="layer-container">
+          <div class="layer_tips">
+            <h1>温馨提示</h1>
+            <p v-html="tipsText"></p>
+            <div class="layer-button">
+              <span class="layer_cancel"><a @click="btnCancel()">取消</a></span><span class="layer_ok"><a @click="btnOk()">确定</a></span>
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="toast" v-show="errMsg"><span v-html="errMsg"></span></div>
+
+    </div>
+
+  <script src="../js/vue.js"></script>
+  <script src="../js/axios.min.js"></script>
+  <script src="../js/fetch.js"></script>
+  <script src="./js/member_order.js"></script>  
+  <script src="../js/check.js"></script>
+
+</body>
+
+</html>

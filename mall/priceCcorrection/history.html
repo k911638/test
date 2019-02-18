@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta name="format-detection" content="telephone=no" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <title>分享历史记录</title>
+		<link rel="stylesheet" type="text/css" href="css/history.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="../js/set_root.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+	<body>
+		
+		<div class="history" id="history">
+		 <div class="history_header">
+				<img src="../image/member_fanhui.png"/>
+				<a href="search.html"><span>返回</span></a>
+				<h2>分享历史记录</h2>
+		</div>
+		 
+		 <div class="history-center">
+		 	<div class="history-header">
+		 		<button>请输入商品名称</button>
+		 		<div class="history-header-img">
+		 			<img src="../image/search.png"/>
+		 		</div>
+		 	</div>
+		<div class="history-middle1">
+		 	<div class="history-middle">
+		 		<div class="history-time">
+		 			<p>2018.12.05</p>
+		 			<span>价格审核中</span>
+		 		</div>
+		 		<div class="history-middle-img">
+		 			<img src="../image/shangpin.png"/>
+		 		</div>
+		 		<h2>蓝月亮     高级洗衣液   3kg  自然清香味道 </h2>
+		 		<p>价格：200.00元</p>
+		 		<span>超市：华润万家</span>
+		 		<button @click="test">撤销价格</button>
+		 	</div>
+		 	
+		 	<div class="history-middle">
+		 		<div class="history-time">
+		 			<p>2018.12.05</p>
+		 			<span>价格使用中</span>
+		 		</div>
+		 		<div class="history-middle-img">
+		 			<img src="../image/shangpin.png"/>
+		 		</div>
+		 		<h2>蓝月亮     高级洗衣液   3kg  自然清香味道 </h2>
+		 		<p>价格：200.00元</p>
+		 		<span>超市：华润万家</span>
+		 		<button><a href="price.html">纠错价格</a></button>
+		 	</div>
+		 </div>
+	</div>
+		 	
+		 	<div class="history_pop" v-show="play">
+		 		<div class="history_pop_center">
+		 			<h3>撤销价格</h3>
+		 			<p>您是否需要撤销您的价格纠错申请？</p>
+		 			<div class="history_pop_cancel2"></div>
+		 			<div class="history_pop_cancel3"></div>
+		 			<div class="history_pop_cancel1">
+		 				<div class="history_pop_cancel" @click="cancel">
+		 				取消
+			 			</div>
+			 			<div class="history_pop_determine" @click="determine">
+			 				确定
+			 			</div>
+		 			</div>
+		 		</div>
+		 	</div>
+		 	
+	</div>
+		
+		<script src="../js/layout.js" type="text/javascript" charset="utf-8"></script>
+       <script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript" src="../js/axios.min.js"></script>
+	    <script src="js/history.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

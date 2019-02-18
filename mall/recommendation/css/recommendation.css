@@ -1,0 +1,135 @@
+#app {
+  background: #efefef;
+  min-height: 100vh;
+}
+
+.header {
+  height: 13.333vw;
+  background: #fff;
+  position: relative;
+  text-align: center;
+  border: none;
+  line-height: 13.333vw;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #ddd;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.header em {
+  font-style: normal;
+  font-size: 4.267vw;
+}
+
+.header-fanhui {
+  background: url(../../image/member_fanhui.png) no-repeat 3.2vw 4vw;
+  background-size: 2.933vw 5.333vw;
+  display: block;
+  position: absolute;
+  padding-left: 8vw;
+  color: #ec7e2d;
+  font-size: 4.267vw;
+}
+
+.type {
+  background: #fff;
+  padding: 3.2vw 0;
+  margin-bottom: 1.6vw;
+}
+.type ul {
+  display: flex;
+}
+.type li {
+  flex: 1;
+  text-align: center;
+  height: 6vw;
+  line-height: 6vw;
+}
+.type li.active {
+  color: #ec7e2d;
+}
+.type li:nth-child(1) {
+  position: relative;
+}
+.type li:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ddd;
+  width: 1px;
+  height: 100%;
+  transform: scaleX(0.5);
+  transform-origin: 0 0;
+}
+
+.list {
+  position: relative;
+}
+
+.shop_content {
+	background: #fff;
+	margin-bottom: 1.6vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 30.933vw auto;
+}
+
+img.shop_photo {
+	width: 26.133vw;
+	height: 26.133vw;
+	margin: 1.6vw 1.6vw 1.6vw 3.2vw;
+}
+
+.shop_info {
+	margin: 1.6vw 3.2vw 1.6vw 0;
+	position: relative;
+}
+
+.shop_info h3 {
+	color: rgba(51, 51, 51, 1);
+	font-size: 4.267vw;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+
+.minprice {
+	font-size: 3.2vw;
+  color: rgba(236, 126, 45, 1);
+  margin-top: 3.2vw;
+}
+.maxprice {
+  font-size: 3.2vw;
+  margin-top: 3.2vw;
+}
+
+.ranking {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #ec7e2d;
+  font-size: 4.267vw;
+}
+
+.addCart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  background: #ec7e2d;
+  border: none;
+  height: 8vw;
+  border-radius: 1.6vw;
+  padding: 0 1.6vw;
+  font-size: 4.267vw;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>价格纠错/分享</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script type="text/javascript" src="../js/set_root.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+</head>
+<body>
+<div class="search" id="search">
+    <div class="search_header">
+        <img src="../image/member_fanhui.png"/>
+        <span><a href="../myTask/myTask.html">返回</a></span>
+        <h2>价格纠错/分享</h2>
+        <a href="history.html"><p>历史</p></a>
+    </div>
+
+    <div class="search-center">
+        <div class="search-header">
+            <button>请输入商品名称</button>
+            <div class="search-header-img">
+                <img src="../image/search.png"/>
+            </div>
+        </div>
+        <div class="search-middle1">
+            <div class="search-middle" v-for="(item,index) in listData">
+                {{index}}
+                <div class="search-middle-img">
+                    <img src="../image/shangpin.png"/>
+                </div>
+                <h2>蓝月亮 高级洗衣液 3kg 自然清香味道 </h2>
+                <button @click="play">查看超市价格/分享</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="history-pop" v-if="showPriceShareBox">
+
+        <div class="history-pop-center">
+            <div class="history-pop-center2">
+                <div class="history-pop-center1">
+                    <h2>蓝月亮 高级洗衣液 3kg 自然清香味道 </h2>
+                    <img src="../image/exit.png"/ @click="cross">
+                </div>
+                <!--<h2>蓝月亮     高级洗衣液   3kg  自然清香味道 </h2>-->
+                <div class="history-pop-center12">
+                    <p>大润发:</p>
+                    <span>20.98元</span>
+                    <button><a href="price.html">进行纠错</a></button>
+                </div>
+                <div class="history-pop-center12">
+                    <p>沃尔玛:</p>
+                    <span>19.98元</span>
+                    <button><a href="price.html">进行纠错</a></button>
+                </div>
+                <div class="history-pop-center12">
+                    <p>百佳华:</p>
+                    <span>20.98元</span>
+                    <button><a href="report.html">举报价格</a></button>
+                </div>
+                <div class="history-pop-center12">
+                    <p>天虹</p>
+                    <span>价格审核中</span>
+                    <button @click="immediately">立即查看</button>
+                </div>
+                <div class="history-pop-center12">
+                    <p>华润万家:</p>
+                    <span>暂无价格</span>
+                    <button><a href="shareit.html">立即分享</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="history-pop1" v-if="showPriceAuditBox">
+
+        <div class="history-pop-center1">
+            <div class="history-pop-center21">
+                <div class="history-pop-center11">
+                    <img src="../image/viewBackNow.png" @click="cancel"/>
+                    <h2>价格正在审核中</h2>
+                </div>
+                <div class="history-pop-center121">
+                    <p>价格类型:</p>
+                    <span>促销价</span>
+                </div>
+                <div class="history-pop-center121">
+                    <p>开始时间:</p>
+                    <span>2018.10.10   13：00</span>
+                </div>
+                <div class="history-pop-center121">
+                    <p>结束时间:</p>
+                    <span>2018.12.10   13：00</span>
+                </div>
+                <div class="history-pop-center121">
+                    <p>纠错人员</p>
+                    <span>张三</span>
+                </div>
+                <div class="history-pop-center121">
+                    <p>纠错价格:</p>
+                    <span>19.66元</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" src="../js/vue.js"></script>
+<script src="../js/layout.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript" src="../js/axios.min.js"></script>
+<script type="text/javascript" src="../js/fetch.js"></script>
+<script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

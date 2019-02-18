@@ -1,0 +1,240 @@
+.sharing{
+		min-height: 100vh;
+		background: #F5F5F5;
+	}
+.sharing_header{
+	height: .88rem;
+	width: auto;
+	line-height: .88rem;
+	background: #ffffff;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	border-bottom: 1px solid #d9d9d9; 
+}	
+.sharing_header img{
+	width: .22rem;
+	height: .4rem;
+	padding-left: .24rem;
+}
+.sharing_header span {
+	color: #ec7e2d;
+	/*font-size: 24px;*/
+	font-size: .36rem;
+	/*12px-36px*/
+	padding-left: .1rem;
+}
+.sharing_header a {
+	color: #ec7e2d;
+}
+.sharing_header  h2{
+	font-weight: normal;
+	font-size: .36rem;
+	padding-left: 1.78rem;
+}
+.sharing_center1{
+	width: 7.02rem;
+	height: 2.54rem;
+	border-radius: .12rem;
+	background: #fff;
+	margin-top: .24rem;
+	margin-left: .24rem;
+	position: relative;
+}
+.sharing_center1_header{
+	font-size: .24rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: .24rem;
+    border-bottom: #d9d9d9 solid 1px;
+    padding-bottom: .13rem;
+}
+.sharing_center1_header p{
+	padding-left: .24rem;
+	color: #333;
+}
+.sharing_center1_header span{
+	padding-right: .24rem;
+	color: #ec7e2e;
+}
+.sharing_center1_cen{
+padding-left: .25rem;
+display: flex;
+flex-wrap: wrap;
+}
+.sharing_center1_cen h3{
+	font-size: .32rem;
+	font-weight: normal;
+	color:#333;
+	padding-top: .20rem;
+ 
+}
+.sharing_center1_cen span{
+	font-size: .2rem;
+	font-weight: normal;
+	color:#999;
+	padding-top: .16rem;
+	padding-bottom: .1rem;
+}
+.sharing_center1_bu1{
+	width: 1.4rem;
+	height: .48rem;
+	border: 1px solid #ec7e2d;
+	background: #fff;
+	color: #ec7e2d;
+	font-size: .24rem;
+	border-radius: .12rem;
+	position: absolute;
+	top: 1.95rem;
+	left: 3.8rem;
+}
+.sharing_center1_bu2{
+	width: 1.4rem;
+	height: .48rem;
+	border: 1px solid #ec7e2d;
+	background: #ec7e2d;
+	color: #fff;
+	font-size: .24rem;
+	border-radius: .12rem;
+	position: absolute;
+	top: 1.95rem;
+	left: 5.4rem;
+}
+
+.sharing_center2{
+	width: 7.02rem;
+	height: 2.54rem;
+	border-radius: .12rem;
+	background: #fff;
+	margin-top: .12rem;
+	margin-left: .24rem;
+	position: relative;
+}
+.sharing_center2_header{
+	font-size: .24rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: .24rem;
+    border-bottom: #d9d9d9 solid 1px;
+    padding-bottom: .13rem;
+}
+.sharing_center2_header p{
+	padding-left: .24rem;
+	color: #333;
+}
+.sharing_center2_header span{
+	padding-right: .24rem;
+	color: #ec7e2e;
+}
+.sharing_center2_cen{
+padding-left: .25rem;
+display: flex;
+flex-wrap: wrap;
+}
+.sharing_center2_cen h3{
+	font-size: .32rem;
+	font-weight: normal;
+	color:#333;
+	padding-top: .20rem;
+ 
+}
+.sharing_center2_cen span{
+	font-size: .2rem;
+	font-weight: normal;
+	color:#999;
+	padding-top: .16rem;
+	padding-bottom: .1rem;
+}
+.sharing_center2_bu1{
+	width: 1.4rem;
+	height: .48rem;
+	border: 1px solid #ec7e2d;
+	background: #fff;
+	color: #ec7e2d;
+	font-size: .24rem;
+	border-radius: .12rem;
+	position: absolute;
+	top: 1.95rem;
+	left: 3.8rem;
+}
+.sharing_center2_bu2{
+	width: 1.4rem;
+	height: .48rem;
+	border: 1px solid #ec7e2d;
+	background: #ec7e2d;
+	color: #fff;
+	font-size: .24rem;
+	border-radius: .12rem;
+	position: absolute;
+	top: 1.95rem;
+	left: 5.4rem;
+}
+
+
+.sharing_pop{
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.2);
+		position: fixed;
+		top: 0;
+		right: 0;
+}
+.sharing_pop_center{
+	width: 4.46rem;
+	height: 2.44rem;
+	background: #FFFFFF;
+	border-radius: .12rem;
+	position: absolute;
+	top: 5.25rem;
+	left:1.55rem ;
+}
+.sharing_pop_center h3{
+    font-weight: normal;
+     font-size: .32rem;
+     color: #333333;
+     text-align: center;
+     padding-top: .2rem;
+}
+.sharing_pop_center p{
+     font-size: .24rem;
+     color: #333333;
+     text-align: center;
+     padding-top: .15rem;
+      padding-bottom: .1rem;
+}
+.sharing_pop_cancel{
+	font-size: .32rem;
+     color: #999999;
+     padding-right: .81rem;
+}
+.sharing_pop_determine{
+	font-size: .32rem;
+     color: #EC7E2D;
+      padding-left: .81rem;
+}
+.sharing_pop_cancel1{
+	display: flex;
+	padding-top: .24rem;
+	justify-content: center;
+	align-items: center;
+}
+.sharing_pop_cancel2{
+	width: 4rem;
+	height: 1px;
+	border-top: 1px solid #D9D9D9;
+	background: #D9D9D9;
+    position: absolute;
+    top: 1.6rem;
+    right: 0.2rem;
+}
+.sharing_pop_cancel3{
+	width: 1.6px;
+	height: .79rem;
+	border-top: 1px solid #D9D9D9;
+	background: #D9D9D9;
+    position: absolute;
+    top: 1.6rem;
+    left: 2.3rem;
+}

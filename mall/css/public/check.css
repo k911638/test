@@ -1,0 +1,110 @@
+a {
+  text-decoration: none;
+}
+.pops_window {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 8888;
+}
+
+.pops_windowBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 8888;
+  background: rgba(0, 0, 0, .5);
+}
+
+.pops_windowContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 8889;
+}
+
+.pops_windowBox {
+  background: #fff;
+  border-radius: 1.6vw;
+  width: 60vw;
+  position: relative;
+  padding-bottom: 10.667vw;
+}
+
+.pops_windowTitle {
+  text-align: center;
+  font-size: 4.267vw;
+  margin: 4.8vw auto 3.2vw auto;
+  font-weight: bold;
+}
+
+.pops_windowGo {
+  text-align: center;
+  font-size: 3.733vw;
+  margin-bottom: 4.8vw;
+  line-height: 1.6;
+}
+
+.pops_windowButton {
+  left: 3.2vw;
+  position: absolute;
+  bottom: 0;
+  width: 53.6vw;
+  height: 10.667vw;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 4.267vw;
+}
+.pops_windowButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  background: #DCDCDC;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.pops_windowCancel {
+  text-align: center;  
+  line-height: 10.667vw;
+  position: relative;
+}
+.pops_windowCancel::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  background: #DCDCDC;
+  width: 1px;
+  height: 100%;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.pops_windowCancel a {
+  color: rgba(153, 153, 153, 1);
+}
+
+.pops_windowOk {
+  text-align: center;  
+  line-height: 10.667vw;
+}
+.pops_windowOk a {
+  color: rgba(236, 126, 45, 1);
+}

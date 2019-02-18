@@ -1,0 +1,94 @@
+body{margin: 0;font-size: 13px;color: #333;}li{list-style: none;}h1,h2,h3,h4,ul,p,li,img{margin: 0;padding: 0;}
+
+	.con{
+		position: absolute;
+		top: 0;right: 0;bottom: 0;left: 0;
+	}
+	.header{
+		height: 2.5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.fanhui{display: flex;align-items: center;}
+	.fanhui span{color: #ec7e2d;}
+	.fanhui img{width: 0.8rem;height: 0.7rem;margin-left: 0.5rem;}
+	.title{margin-left: -2rem;}
+
+
+
+
+	.center{
+		position: absolute;
+		left: 0;right: 0;top: 2.5rem;bottom: 2.5rem;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.logo{width: 18.75rem;height: 5.76rem;display: flex;justify-content: center;align-items: center;}
+	.logo img{width: 5.5rem;height: 3.5rem;}
+	
+	
+	
+	.register_con{
+		display: flex;
+		justify-content: center;
+	}
+	.register_window{
+		width: 15.5rem;
+		height: 21.0rem;
+		background-color: #fff;
+	}
+	.register_window form{
+		padding: 0.5rem;
+	}
+	.register_window li h3{
+		align-self: center;
+		color: #666;
+	}
+	.yzm{display: flex;}
+	#user_yzm{width: 10.0rem;}
+	#yzm_btn{width:4.0rem;height:1.7rem;background-color: #ec7e2d;color: #fff;border-radius: 3px;padding: 0;font-size:12px;}
+	.register_window li{
+		display: flex;
+		flex-direction: column;
+	}
+	.register_window input{
+		height: 1.25rem;
+		padding: 5px 10px;
+	}
+	.reg_sub input{
+		height: 40px;
+		background-color: #ec7e2d;
+		color: #fff;
+		border-radius: 0.3rem;
+	}
+	.register_window li span{
+		visibility: hidden;
+		font-size: 12px;
+		color: red;
+	}
+	
+
+
+
+	#body .points_active{background-color:rgba(0,0,255,0.3);}
+	
+	 /*弹窗*/
+    .pop_window10{
+        position: absolute;
+        top: 0;right: 0;bottom: 0;left: 0;
+        z-index: 8889;
+        display: none;
+    }
+    .pop_window10 div{
+        width: 6.6rem;
+        height: 6.6rem;
+        margin:15rem auto 0;
+        padding: 0.2rem;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 0.3rem;
+    }

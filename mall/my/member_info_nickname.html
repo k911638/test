@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>修改昵称</title>
+    <link rel="stylesheet" type="text/css" href="./css/member.css">
+     <style type="text/css">
+        /*弹窗*/
+    .pop_window1{
+        position: absolute;
+        top: 0;right: 0;bottom: 0;left: 0;
+        z-index: 8889;
+        display: none;
+    }
+    .pop_window1 div{
+        width: 6.6rem;
+        height: 6.6rem;
+        margin:11rem auto 0;
+        padding: 0 0.5rem;
+        color: #fff;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 0.3rem;
+    }
+    </style>
+    <script type="text/javascript" src="../js/set_root.js"></script>
+</head>
+
+<body id="body">
+    <div class="member_con">
+        <div class="member_header">
+            <span class="member_fanhui">返回</span><span class="member_keep">保存</span>修改昵称
+        </div>
+
+        <div class="center">
+            <div class="member_modify_name">
+                <form action="" method="post"><span><img src="../image/member_empty.png"></span><input type="text" name="member_modify_name"
+                        id="member_modify_name" value="邻阿姨"></form>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="pop_window1"><div>弹框</div></div>
+
+
+
+    <script type="text/javascript" src="../js/jquery2.24.js"></script>
+    <script type="text/javascript" src="/js/public/ajax.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/member_info_nickname.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <title>推荐商品</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="./css/recommendation.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <span class="header-fanhui" @click="goback()">返回</span>
+      <em>推荐商品</em>
+    </div>
+
+    <div class="type">
+      <ul>
+        <li class="active">热卖商品</li>
+        <li>特卖商品</li>
+      </ul>
+    </div>
+
+    <div class="list">
+
+      <div class="shop_content">
+        <img class="shop_photo" src="../image/lanyueliang.png" />
+        <div class="shop_info">
+          <h3>蓝月亮洗衣液</h3>
+          <p class="minprice">最低价：12元 大润发</p>
+          <p class="maxprice">最高价：21元 华润万家</p>
+          <span class="ranking">差价率：120%</span>
+          <button class="addCart">加入购物车</button>          
+        </div>
+      </div>
+
+      <div class="shop_content">
+        <img class="shop_photo" src="../image/lanyueliang.png" />
+        <div class="shop_info">
+          <h3>蓝月亮洗衣液</h3>
+          <p class="minprice">最低价：12元 大润发</p>
+          <p class="maxprice">最高价：21元 华润万家</p>
+          <span class="ranking">差价率：120%</span>
+          <button class="addCart">加入购物车</button>          
+        </div>
+      </div>
+
+      <div class="shop_content">
+        <img class="shop_photo" src="../image/lanyueliang.png" />
+        <div class="shop_info">
+          <h3>蓝月亮洗衣液</h3>
+          <p class="minprice">最低价：12元 大润发</p>
+          <p class="maxprice">最高价：21元 华润万家</p>
+          <span class="ranking">差价率：120%</span>
+          <button class="addCart">加入购物车</button>          
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script src="../js/axios.min.js"></script>
+  <script src="./js/recommendation.js"></script>
+  <script type="text/javascript" src="../js/check.js"></script>
+</body>
+</html>
